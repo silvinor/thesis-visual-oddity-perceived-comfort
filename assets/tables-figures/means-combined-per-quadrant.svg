@@ -123,33 +123,33 @@
 
     <text class="center" transform="rotate(-90 34 212)" x="34" y="212">Mean rating (1-5)</text>
     <path d="M115,332 L115,306.9 Q115,300.9 121,300.9 L171,300.9 Q177,300.9 177,306.9 L177,332 Z" class="bar1 s3" />
-    <line x1="146" y1="305" x2="146" y2="296.6" class="err_halo invert" />
-    <line x1="135" y1="305" x2="157" y2="305" class="err_halo invert" />
-    <line x1="135" y1="296.6" x2="157" y2="296.6" class="err_halo invert" />
-    <line x1="146" y1="305" x2="146" y2="296.6" class="err_line" />
-    <line x1="135" y1="305" x2="157" y2="305" class="err_line" />
-    <line x1="135" y1="296.6" x2="157" y2="296.6" class="err_line" />
+    <line x1="146" y1="307.3" x2="146" y2="294.5" class="err_halo invert" />
+    <line x1="135" y1="307.3" x2="157" y2="307.3" class="err_halo invert" />
+    <line x1="135" y1="294.5" x2="157" y2="294.5" class="err_halo invert" />
+    <line x1="146" y1="307.3" x2="146" y2="294.5" class="err_line" />
+    <line x1="135" y1="307.3" x2="157" y2="307.3" class="err_line" />
+    <line x1="135" y1="294.5" x2="157" y2="294.5" class="err_line" />
     <path d="M183,332 L183,313.5 Q183,307.5 189,307.5 L239,307.5 Q245,307.5 245,313.5 L245,332 Z" class="bar2 sA" />
-    <line x1="214" y1="311.6" x2="214" y2="303.8" class="err_halo invert" />
-    <line x1="203" y1="311.6" x2="225" y2="311.6" class="err_halo invert" />
-    <line x1="203" y1="303.8" x2="225" y2="303.8" class="err_halo invert" />
-    <line x1="214" y1="311.6" x2="214" y2="303.8" class="err_line" />
-    <line x1="203" y1="311.6" x2="225" y2="311.6" class="err_line" />
-    <line x1="203" y1="303.8" x2="225" y2="303.8" class="err_line" />
+    <line x1="214" y1="314.8" x2="214" y2="300.3" class="err_halo invert" />
+    <line x1="203" y1="314.8" x2="225" y2="314.8" class="err_halo invert" />
+    <line x1="203" y1="300.3" x2="225" y2="300.3" class="err_halo invert" />
+    <line x1="214" y1="314.8" x2="214" y2="300.3" class="err_line" />
+    <line x1="203" y1="314.8" x2="225" y2="314.8" class="err_line" />
+    <line x1="203" y1="300.3" x2="225" y2="300.3" class="err_line" />
     <path d="M279,332 L279,144.7 Q279,138.7 285,138.7 L335,138.7 Q341,138.7 341,144.7 L341,332 Z" class="bar1 s3" />
-    <line x1="310" y1="143" x2="310" y2="134" class="err_halo invert" />
-    <line x1="299" y1="143" x2="321" y2="143" class="err_halo invert" />
-    <line x1="299" y1="134" x2="321" y2="134" class="err_halo invert" />
-    <line x1="310" y1="143" x2="310" y2="134" class="err_line" />
-    <line x1="299" y1="143" x2="321" y2="143" class="err_line" />
-    <line x1="299" y1="134" x2="321" y2="134" class="err_line" />
+    <line x1="310" y1="145.3" x2="310" y2="132.1" class="err_halo invert" />
+    <line x1="299" y1="145.3" x2="321" y2="145.3" class="err_halo invert" />
+    <line x1="299" y1="132.1" x2="321" y2="132.1" class="err_halo invert" />
+    <line x1="310" y1="145.3" x2="310" y2="132.1" class="err_line" />
+    <line x1="299" y1="145.3" x2="321" y2="145.3" class="err_line" />
+    <line x1="299" y1="132.1" x2="321" y2="132.1" class="err_line" />
     <path d="M347,332 L347,137.3 Q347,131.3 353,131.3 L403,131.3 Q409,131.3 409,137.3 L409,332 Z" class="bar2 sA" />
-    <line x1="378" y1="135.8" x2="378" y2="126.8" class="err_halo invert" />
-    <line x1="367" y1="135.8" x2="389" y2="135.8" class="err_halo invert" />
-    <line x1="367" y1="126.8" x2="389" y2="126.8" class="err_halo invert" />
-    <line x1="378" y1="135.8" x2="378" y2="126.8" class="err_line" />
-    <line x1="367" y1="135.8" x2="389" y2="135.8" class="err_line" />
-    <line x1="367" y1="126.8" x2="389" y2="126.8" class="err_line" />
+    <line x1="378" y1="137.5" x2="378" y2="125.0" class="err_halo invert" />
+    <line x1="367" y1="137.5" x2="389" y2="137.5" class="err_halo invert" />
+    <line x1="367" y1="125.0" x2="389" y2="125.0" class="err_halo invert" />
+    <line x1="378" y1="137.5" x2="378" y2="125.0" class="err_line" />
+    <line x1="367" y1="137.5" x2="389" y2="137.5" class="err_line" />
+    <line x1="367" y1="125.0" x2="389" y2="125.0" class="err_line" />
     <text x="180" y="358" class="center">No oddity</text>
     <text x="344" y="358" class="center">Oddity present</text>
     <line x1="92" y1="92" x2="92" y2="332" class="axis" />
@@ -180,33 +180,33 @@
     <text x="551" y="97" class="right">4.0</text>
     <text class="center" transform="rotate(-90 502 212)" x="502" y="212">Mean rating (1-4)</text>
     <path d="M583,332 L583,300.0 Q583,294.0 589,294.0 L639,294.0 Q645,294.0 645,300.0 L645,332 Z" class="bar1 s3" />
-    <line x1="614" y1="299.2" x2="614" y2="288.8" class="err_halo invert" />
-    <line x1="603" y1="299.2" x2="625" y2="299.2" class="err_halo invert" />
-    <line x1="603" y1="288.8" x2="625" y2="288.8" class="err_halo invert" />
-    <line x1="614" y1="299.2" x2="614" y2="288.8" class="err_line" />
-    <line x1="603" y1="299.2" x2="625" y2="299.2" class="err_line" />
-    <line x1="603" y1="288.8" x2="625" y2="288.8" class="err_line" />
+    <line x1="614" y1="301.0" x2="614" y2="287.0" class="err_halo invert" />
+    <line x1="603" y1="301.0" x2="625" y2="301.0" class="err_halo invert" />
+    <line x1="603" y1="287.0" x2="625" y2="287.0" class="err_halo invert" />
+    <line x1="614" y1="301.0" x2="614" y2="287.0" class="err_line" />
+    <line x1="603" y1="301.0" x2="625" y2="301.0" class="err_line" />
+    <line x1="603" y1="287.0" x2="625" y2="287.0" class="err_line" />
     <path d="M651,332 L651,285.0 Q651,279.0 657,279.0 L707,279.0 Q713,279.0 713,285.0 L713,332 Z" class="bar2 sA" />
-    <line x1="682" y1="284" x2="682" y2="273.6" class="err_halo invert" />
-    <line x1="671" y1="284" x2="693" y2="284" class="err_halo invert" />
-    <line x1="671" y1="273.6" x2="693" y2="273.6" class="err_halo invert" />
-    <line x1="682" y1="284" x2="682" y2="273.6" class="err_line" />
-    <line x1="671" y1="284" x2="693" y2="284" class="err_line" />
-    <line x1="671" y1="273.6" x2="693" y2="273.6" class="err_line" />
+    <line x1="682" y1="288.2" x2="682" y2="269.9" class="err_halo invert" />
+    <line x1="671" y1="288.2" x2="693" y2="288.2" class="err_halo invert" />
+    <line x1="671" y1="269.9" x2="693" y2="269.9" class="err_halo invert" />
+    <line x1="682" y1="288.2" x2="682" y2="269.9" class="err_line" />
+    <line x1="671" y1="288.2" x2="693" y2="288.2" class="err_line" />
+    <line x1="671" y1="269.9" x2="693" y2="269.9" class="err_line" />
     <path d="M747,332 L747,244.8 Q747,238.8 753,238.8 L803,238.8 Q809,238.8 809,244.8 L809,332 Z" class="bar1 s3" />
-    <line x1="778" y1="245.6" x2="778" y2="232" class="err_halo invert" />
-    <line x1="767" y1="245.6" x2="789" y2="245.6" class="err_halo invert" />
-    <line x1="767" y1="232" x2="789" y2="232" class="err_halo invert" />
-    <line x1="778" y1="245.6" x2="778" y2="232" class="err_line" />
-    <line x1="767" y1="245.6" x2="789" y2="245.6" class="err_line" />
-    <line x1="767" y1="232" x2="789" y2="232" class="err_line" />
+    <line x1="778" y1="250.5" x2="778" y2="227.1" class="err_halo invert" />
+    <line x1="767" y1="250.5" x2="789" y2="250.5" class="err_halo invert" />
+    <line x1="767" y1="227.1" x2="789" y2="227.1" class="err_halo invert" />
+    <line x1="778" y1="250.5" x2="778" y2="227.1" class="err_line" />
+    <line x1="767" y1="250.5" x2="789" y2="250.5" class="err_line" />
+    <line x1="767" y1="227.1" x2="789" y2="227.1" class="err_line" />
     <path d="M815,332 L815,216.8 Q815,210.8 821,210.8 L871,210.8 Q877,210.8 877,216.8 L877,332 Z" class="bar2 sA" />
-    <line x1="846" y1="217.6" x2="846" y2="204" class="err_halo invert" />
-    <line x1="835" y1="217.6" x2="857" y2="217.6" class="err_halo invert" />
-    <line x1="835" y1="204" x2="857" y2="204" class="err_halo invert" />
-    <line x1="846" y1="217.6" x2="846" y2="204" class="err_line" />
-    <line x1="835" y1="217.6" x2="857" y2="217.6" class="err_line" />
-    <line x1="835" y1="204" x2="857" y2="204" class="err_line" />
+    <line x1="846" y1="222.2" x2="846" y2="199.5" class="err_halo invert" />
+    <line x1="835" y1="222.2" x2="857" y2="222.2" class="err_halo invert" />
+    <line x1="835" y1="199.5" x2="857" y2="199.5" class="err_halo invert" />
+    <line x1="846" y1="222.2" x2="846" y2="199.5" class="err_line" />
+    <line x1="835" y1="222.2" x2="857" y2="222.2" class="err_line" />
+    <line x1="835" y1="199.5" x2="857" y2="199.5" class="err_line" />
     <text x="648" y="358" class="center">No oddity</text>
     <text x="812" y="358" class="center">Oddity present</text>
     <line x1="560" y1="92" x2="560" y2="332" class="axis" />
