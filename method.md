@@ -13,7 +13,7 @@ This study used a quantitative, cross-sectional, experimental design, delivered 
 
 **Table 1** <br>
 *Experimental Conditions: Noise Level × Oddity* <br>
-![](assets/tables-figures/experimental-conditions-table.svg)<br> 
+![](./assets/tables-figures/experimental-conditions-table.svg)<br> 
 *Note.* Each cell represents one of the four within-subjects conditions. Every participant contributes responses to all four conditions.
 
 ## Participants
@@ -36,7 +36,7 @@ The final sample comprised 84 adults recruited through the Prolific online parti
 
 **Figure 2** <br>
 *Example Scene Family Across the Four Experimental Conditions* <br>
-![](assets/tables-figures/example-scene-quadrant.svg)<br>
+![](./assets/tables-figures/example-scene-quadrant.svg)<br>
 *Note.* Top row: normal (no oddity); bottom row: oddity added. Left column: low noise; right column: high noise. All four versions were generated from a single base photograph (right most). The complete stimulus set appears in Appendix A.
 
 Each family started from a single neutral base photograph (an empty scene with no subjects and no out-of-place objects) sourced from royalty-free image libraries such as Pixabay and Pexels, whose licences permit modification and redistribution. These base photographs were not shown to participants; they served only as the base image. The four versions of each scene were then generated from that image using the image-generation tools in ChatGPT, model GPT-5 (OpenAI, 2026). Building all four versions from one base image was a deliberate choice: it held the setting, layout, and lighting constant across conditions, so that the only things that varied were the level of activity (noise) and the presence of an out-of-place element (oddity). Because low-level visual features such as colour and layout shape how scenes are perceived (Berman et al., 2014), holding the base image constant helps ensure that any difference in ratings reflects the manipulation rather than incidental differences between images.
@@ -59,7 +59,7 @@ The main task followed and consisted of 32 trials. On each trial, one scene imag
 
 **Figure 3** <br>
 *Layout of a Single Trial Screen* <br>
-![Layout of a single trial screen showing the scene image above the two rating items](assets/tables-figures/trial-screen-layout.svg) <br>
+![Layout of a single trial screen showing the scene image above the two rating items](./assets/tables-figures/trial-screen-layout.svg) <br>
 *Note.* Each trial presented one scene image with the perceived unexpectedness item (five-point scale) above the discomfort item (four-point scale). Both items required a response before the "Next" button would advance the task, and participants could not return to a previous trial.
 
 Images were selected and ordered by a custom randomisation script written for Gorilla (see Appendix B). One run of the script produced a block of 16 trials: a Fisher–Yates shuffle randomised the order of the 16 scene families, and a second Fisher–Yates shuffle drew conditions from a fixed pool containing each of the four conditions exactly four times, so that every family appeared once and each condition appeared four times within the block. The script was run twice per participant, giving 32 trials in total and a balanced eight images per condition.
