@@ -31,9 +31,9 @@
         .small { font-size: 9pt; }
         .bg { fill: transparent; }
 
-        .thick { stroke-width: 2; }
-        .thin { stroke-width: 0.75; }
-        .dashed { stroke-dasharray: 8 8; }
+        .thick { stroke-width: 4; }
+        .thin { stroke-width: 1.125; }
+        .dashed { stroke-dasharray: 4 4; }
         .box { fill: none; stroke-width: 1; }
 
         .s1 { stroke: #817; } .f1 { fill: #817; }
@@ -51,9 +51,9 @@
     </style>
 
     <defs>
-        <marker id="arrow" viewBox="0 0 20 20" refX="19" refY="10"
-                markerWidth="14" markerHeight="14" orient="auto-start-reverse">
-            <polygon points="0,0 20,10 0,20" style="fill: context-fill; stroke: context-stroke" />
+        <marker id="arrow" viewBox="0 0 15 15" refX="13.5" refY="7.5"
+                markerWidth="10.5" markerHeight="10.5" orient="auto-start-reverse">
+            <polygon points="0,0 15,7.5 0,15" style="fill: context-fill; stroke: context-stroke" />
         </marker>
     </defs>
 

@@ -10,11 +10,11 @@ The analyses reported below examine whether visual oddity raises self-reported d
 Eighty-seven participants were recruited. Two were excluded because their sessions were not fully processed by the hosting platform and returned no usable data, and one for inattentive responding, having failed four of the five attention checks embedded in the other studies in the combined battery. The analysed sample comprised 84 participants (45 women, 39 men) aged 18 to 69 years, *M* = 40.87, *SD* = 12.86 (Figure 4).
 
 **Figure 4** <br>
-*Participant Flow From Recruitment to Analysed Sample* <br>
+*Participant Flow from Recruitment to Analysed Sample* <br>
 ![Flow diagram showing 87 participants recruited, three excluded, and 84 retained contributing 2,688 ratings](./assets/tables-figures/participant-flow.svg) <br>
-*Note.* The present task contained no attention check of its own, as its design did not involve reaction-time measurement. No item-level data were missing and no ratings were excluded from the analysed set.
+*Note.* The present task contained no attention check of its own, as its design did not involve reaction-time measurement. No item-level data were missing, and no ratings were excluded from the analysed set.
 
-Because both rating items required a response before the task would advance, the retained sessions contained no missing item-level data, and each participant completed all 32 trials, yielding 2,688 ratings. Cross-tabulation confirmed a fully balanced design, with 672 ratings in each condition and eight per condition per participant. No ratings were excluded as outliers, both measures being bounded scales on which no value could fall out of range.
+Because both rating items required a response before the task would advance, the retained sessions contained no missing item-level data, and each participant completed all 32 trials, yielding 2,688 ratings. Cross-tabulation confirmed a fully balanced design, with 672 ratings in each condition and eight per condition per participant. No ratings were excluded as outliers; both measures being bounded scales on which no value could fall out of range.
 
 ## Assumption Testing
 
@@ -45,9 +45,9 @@ H1 predicted greater discomfort for scenes containing out-of-place elements. H2 
 The model was significant, *F*(3, 2684) = 151.76, *p* < .001, accounting for 14.5% of the variance in discomfort, *R*² = .145, adjusted *R*² = .144, Cohen's *f*² = 0.17. Coefficients are reported in Table 3.
 
 **Table 3** <br>
-*Multiple Regression Predicting Discomfort From Oddity, Activity Level and Their Interaction* <br>
-![Regression table reporting b, standard error, 95 percent confidence interval, beta, t, p and squared semipartial correlation for each term](./assets/tables-figures/regression-of-discomfort.svg) <br>
-*Note.* *N* = 2,688 ratings. Oddity (0 = absent, 1 = present) and activity (0 = low, 1 = high) were dummy-coded. With the interaction retained, the coefficients are simple effects rather than main effects: the constant is predicted discomfort in the normal / low-activity condition, and the oddity and activity terms are the effect of each factor at the reference level of the other. *sr*² = squared semipartial correlation, the proportion of variance in discomfort uniquely attributable to each term.
+*Multiple Regression Predicting Discomfort from Oddity, Activity Level and Their Interaction* <br>
+![Regression table reporting b, standard error, 95 percent confidence interval, beta, t, p and squared semi partial correlation for each term](./assets/tables-figures/regression-of-discomfort.svg) <br>
+*Note.* *N* = 2,688 ratings. Oddity (0 = absent, 1 = present) and activity (0 = low, 1 = high) were dummy-coded. With the interaction retained, the coefficients are simple effects rather than main effects: the constant is predicted discomfort in the normal / low-activity condition, and the oddity and activity terms are the effect of each factor at the reference level of the other. *sr*² = squared semi partial correlation, the proportion of variance in discomfort uniquely attributable to each term.
 
 H1 was supported. Oddity raised discomfort by 0.69 scale points in low-activity scenes, *b* = 0.690, 95% CI [0.584, 0.797], β = .32, *t*(2684) = 12.69, *p* < .001, *sr*² = .051. Scenes containing an out-of-place element were rated as less comfortable to enter than otherwise identical scenes without one, and the effect held at both activity levels, the corresponding simple effect in high-activity scenes being 0.85 scale points. Oddity was the largest term in the model, uniquely accounting for 5.1% of the variance in discomfort against 0.4% and 0.1% for the remaining terms.
 
