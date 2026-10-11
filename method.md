@@ -70,7 +70,7 @@ The task was deliberately short to limit fatigue. The 32-trial rating block took
 
 ## Data Analysis
 
-All analyses were conducted in IBM SPSS Statistics (Version 31.0.1.0 (49)). Each rating was converted to a numeric score: discomfort from 1 to 4 and perceived unexpectedness from 1 to 5, coded so that higher scores indicated greater discomfort and greater unexpectedness, respectively. Oddity (0 = none, 1 = present) and noise (0 = low, 1 = high) were dummy-coded.
+All analyses were conducted in IBM SPSS Statistics (Version 31.0.1.0 [49]). Each rating was converted to a numeric score: discomfort from 1 to 4 and perceived unexpectedness from 1 to 5, coded so that higher scores indicated greater discomfort and greater unexpectedness, respectively. Oddity (0 = none, 1 = present) and noise (0 = low, 1 = high) were dummy-coded.
 
 Of the 87 participants recruited, three were excluded before analysis. Two returned no usable data, their submissions having not been fully processed by the platform, and one was excluded for inattentive responding. As noted above, this study formed part of a combined battery of six honours studies, and the participant in question failed four of the five attention checks embedded in the other studies in that battery; the present task carried no attention check of its own, as its design did not involve reaction-time measurement, so the judgement was made on the cohort-wide record. This left a final analysed sample of 84 participants contributing 2,688 ratings (84 × 32). Because both items required a response before the task would advance, the retained sessions contained no missing item-level data, and no ratings were lost to partial completion.
 
