@@ -1,0 +1,404 @@
+---
+layout: default
+js:
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js
+css:
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-coy.min.css
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css
+style: >-
+  .spss-title { font-weight: bold; margin: 1.75rem 0 0.5rem; }
+  .spss { font-size: 0.85rem; width: auto; font-variant-numeric: tabular-nums; }
+  .spss th, .spss td { padding: 0.25rem 0.6rem; vertical-align: bottom; }
+  .spss thead th { font-weight: normal; }
+  .spss tbody th { font-weight: normal; text-align: left; white-space: nowrap; }
+  .spss tbody td { text-align: right; white-space: nowrap; }
+  .spss-note { font-size: 0.8rem; margin: 0; }
+  .spss-output { font-size: 0.8rem; line-height: 1.35; padding: 1rem; border: 1px solid rgba(127,127,127,0.35); border-radius: 0.5em; overflow-x: auto; }
+  .appendix-c section { margin-top: 3rem; }
+---
+
+<div class="appendix-c">
+
+<h1>Appendix C</h1>
+
+<p class="lead">SPSS Syntax and Output for the Reported Analyses</p>
+
+<p>All analyses were run in IBM SPSS Statistics (Version 31.0.1.0), with the PROCESS macro (Version 4.2; Hayes, 2017) for the mediation models. Each section gives the syntax that was run and the output it produced. PROCESS output is reproduced verbatim; the regression tables are transcribed from the SPSS output file, with values shown at the precision SPSS displayed them.</p>
+
+<p>Variables: <code>c_discom</code> = discomfort (1&ndash;4, higher = more discomfort); <code>c_expect</code> = perceived unexpectedness (1&ndash;5, higher = more unexpected); <code>c_oddity</code> = oddity (0 = absent, 1 = present); <code>c_noise</code> = activity level (0 = low, 1 = high); <code>c_oddnse</code> = <code>c_oddity</code> &times; <code>c_noise</code>.</p>
+
+<ul>
+  <li><a href="#c1">C1. Multiple regression of discomfort on oddity, activity level and their interaction (H1 and H2)</a></li>
+  <li><a href="#c2">C2. Mediation of oddity on discomfort by perceived unexpectedness, rating level (H3)</a></li>
+  <li><a href="#c3">C3. Mediation re-estimated on participant &times; condition means (sensitivity analysis)</a></li>
+</ul>
+
+<section id="c1">
+<h2>C1. Multiple Regression (H1 and H2)</h2>
+
+<p><i>N</i> = 2,688 ratings. Ordinary least squares standard errors.</p>
+
+<h3 class="h5">Syntax</h3>
+<pre class="language-none line-numbers" style="white-space: pre-wrap;"><code
+  >REGRESSION
+  /DESCRIPTIVES MEAN STDDEV CORR SIG N
+  /MISSING LISTWISE
+  /STATISTICS COEFF OUTS CI(95) R ANOVA COLLIN TOL CHANGE ZPP
+  /CRITERIA=PIN(.05) POUT(.10) TOLERANCE(.0001)
+  /NOORIGIN
+  /DEPENDENT c_discom
+  /METHOD=ENTER c_oddity c_noise c_oddnse
+  /SCATTERPLOT=(*ZRESID ,*ZPRED)
+  /RESIDUALS DURBIN HISTOGRAM(ZRESID) NORMPROB(ZRESID)
+  /CASEWISE PLOT(ZRESID) OUTLIERS(3)
+  /SAVE MAHAL COOK LEVER.</code></pre>
+
+<h3 class="h5">Output</h3>
+<p class="spss-title">Model Summary</p>
+<div class="table-responsive"><table class="table table-sm spss ">
+<thead>
+<tr><th rowspan="2">Model</th><th rowspan="2">R</th><th rowspan="2">R Square</th><th rowspan="2">Adjusted R Square</th><th rowspan="2">Std. Error of the Estimate</th><th colspan="5" class="text-center">Change Statistics</th><th rowspan="2">Durbin-Watson</th></tr>
+<tr><th>R Square Change</th><th>F Change</th><th>df1</th><th>df2</th><th>Sig. F Change</th></tr>
+</thead><tbody>
+<tr><th scope="row">1</th><td>.381</td><td>.145</td><td>.144</td><td>.997</td><td>.145</td><td>151.757</td><td>3</td><td>2684</td><td>&lt;.001</td><td>1.678</td></tr>
+</tbody></table></div>
+<p class="spss-note">a. Predictors: (Constant), c_oddnse, c_noise, c_oddity</p>
+<p class="spss-note">b. Dependent Variable: c_discom</p>
+<p class="spss-title">ANOVA</p>
+<div class="table-responsive"><table class="table table-sm spss ">
+<thead>
+<tr><th>Model</th><th></th><th>Sum of Squares</th><th>df</th><th>Mean Square</th><th>F</th><th>Sig.</th></tr>
+</thead><tbody>
+<tr><th scope="row" class="model">1</th><th scope="row">Regression</th><td>452.965</td><td>3</td><td>150.988</td><td>151.757</td><td>&lt;.001</td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">Residual</th><td>2670.406</td><td>2684</td><td>.995</td><td></td><td></td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">Total</th><td>3123.372</td><td>2687</td><td></td><td></td><td></td></tr>
+</tbody></table></div>
+<p class="spss-note">a. Dependent Variable: c_discom</p>
+<p class="spss-note">b. Predictors: (Constant), c_oddnse, c_noise, c_oddity</p>
+<p class="spss-title">Coefficients</p>
+<div class="table-responsive"><table class="table table-sm spss ">
+<thead>
+<tr><th rowspan="2">Model</th><th rowspan="2"></th><th colspan="2" class="text-center">Unstandardized Coefficients</th><th class="text-center">Standardized Coefficients</th><th rowspan="2">t</th><th rowspan="2">Sig.</th><th colspan="2" class="text-center">95.0% Confidence Interval for B</th><th colspan="3" class="text-center">Correlations</th><th colspan="2" class="text-center">Collinearity Statistics</th></tr>
+<tr><th>B</th><th>Std. Error</th><th>Beta</th><th>Lower Bound</th><th>Upper Bound</th><th>Zero-order</th><th>Partial</th><th>Part</th><th>Tolerance</th><th>VIF</th></tr>
+</thead><tbody>
+<tr><th scope="row" class="model">1</th><th scope="row">(Constant)</th><td>1.475</td><td>.038</td><td></td><td>38.326</td><td>&lt;.001</td><td>1.399</td><td>1.550</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">c_oddity</th><td>.690</td><td>.054</td><td>.320</td><td>12.689</td><td>&lt;.001</td><td>.584</td><td>.797</td><td>.358</td><td>.238</td><td>.226</td><td>.500</td><td>2.000</td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">c_noise</th><td>.188</td><td>.054</td><td>.087</td><td>3.446</td><td>.001</td><td>.081</td><td>.294</td><td>.125</td><td>.066</td><td>.061</td><td>.500</td><td>2.000</td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">c_oddnse</th><td>.162</td><td>.077</td><td>.065</td><td>2.108</td><td>.035</td><td>.011</td><td>.313</td><td>.300</td><td>.041</td><td>.038</td><td>.333</td><td>3.000</td></tr>
+</tbody></table></div>
+<p class="spss-note">a. Dependent Variable: c_discom</p>
+<p class="spss-title">Collinearity Diagnostics</p>
+<div class="table-responsive"><table class="table table-sm spss ">
+<thead>
+<tr><th rowspan="2">Model</th><th rowspan="2">Dimension</th><th rowspan="2">Eigenvalue</th><th rowspan="2">Condition Index</th><th colspan="4" class="text-center">Variance Proportions</th></tr>
+<tr><th>(Constant)</th><th>c_oddity</th><th>c_noise</th><th>c_oddnse</th></tr>
+</thead><tbody>
+<tr><th scope="row" class="model">1</th><th scope="row">1</th><td>2.914</td><td>1.000</td><td>.02</td><td>.02</td><td>.02</td><td>.02</td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">2</th><td>.500</td><td>2.414</td><td>.00</td><td>.25</td><td>.25</td><td>.00</td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">3</th><td>.500</td><td>2.414</td><td>.25</td><td>.00</td><td>.00</td><td>.25</td></tr>
+<tr><th scope="row" class="model"></th><th scope="row">4</th><td>.086</td><td>5.828</td><td>.73</td><td>.73</td><td>.73</td><td>.73</td></tr>
+</tbody></table></div>
+<p class="spss-note">a. Dependent Variable: c_discom</p>
+<p class="spss-title">Residuals Statistics</p>
+<div class="table-responsive"><table class="table table-sm spss ">
+<thead>
+<tr><th></th><th>Minimum</th><th>Maximum</th><th>Mean</th><th>Std. Deviation</th><th>N</th></tr>
+</thead><tbody>
+<tr><th scope="row">Predicted Value</th><td>1.47</td><td>2.51</td><td>1.95</td><td>.411</td><td>2688</td></tr>
+<tr><th scope="row">Std. Predicted Value</th><td>−1.168</td><td>1.365</td><td>.000</td><td>1.000</td><td>2688</td></tr>
+<tr><th scope="row">Standard Error of Predicted Value</th><td>.038</td><td>.038</td><td>.038</td><td>.000</td><td>2688</td></tr>
+<tr><th scope="row">Adjusted Predicted Value</th><td>1.47</td><td>2.52</td><td>1.95</td><td>.411</td><td>2688</td></tr>
+<tr><th scope="row">Residual</th><td>−1.515</td><td>2.525</td><td>.000</td><td>.997</td><td>2688</td></tr>
+<tr><th scope="row">Std. Residual</th><td>−1.519</td><td>2.532</td><td>.000</td><td>.999</td><td>2688</td></tr>
+<tr><th scope="row">Stud. Residual</th><td>−1.520</td><td>2.534</td><td>.000</td><td>1.000</td><td>2688</td></tr>
+<tr><th scope="row">Deleted Residual</th><td>−1.517</td><td>2.529</td><td>.000</td><td>.998</td><td>2688</td></tr>
+<tr><th scope="row">Stud. Deleted Residual</th><td>−1.520</td><td>2.536</td><td>.000</td><td>1.000</td><td>2688</td></tr>
+<tr><th scope="row">Mahal. Distance</th><td>2.999</td><td>2.999</td><td>2.999</td><td>.000</td><td>2688</td></tr>
+<tr><th scope="row">Cook's Distance</th><td>.000</td><td>.002</td><td>.000</td><td>.000</td><td>2688</td></tr>
+<tr><th scope="row">Centered Leverage Value</th><td>.001</td><td>.001</td><td>.001</td><td>.000</td><td>2688</td></tr>
+</tbody></table></div>
+<p class="spss-note">a. Dependent Variable: c_discom</p>
+
+<p class="mt-4">No Casewise Diagnostics table was produced: no case had a standardised residual beyond &plusmn;3. The residual histogram, normal P&ndash;P plot and residual-by-predicted scatterplot requested above are not reproduced here.</p>
+</section>
+
+<section id="c2">
+<h2>C2. Mediation Analysis (H3)</h2>
+
+<p><i>N</i> = 2,688 ratings. PROCESS Model 4 with activity level as a covariate, HC4 standard errors, 10,000 bootstrap samples and a fixed random seed (20260727), so the bootstrap interval for the indirect effect can be reproduced exactly.</p>
+
+<h3 class="h5">Syntax</h3>
+<pre class="language-none line-numbers" style="white-space: pre-wrap;"><code
+  >* Encoding: UTF-8.
+    PROCESS
+        y=c_discom
+        /x=c_oddity
+        /m=c_expect
+        /cov=c_noise
+        /model=4
+        /boot=10000
+        /conf=95
+        /hc=4
+        /effsize=1
+        /stand=1
+        /total=1
+        /seed=20260727.</code></pre>
+
+<h3 class="h5">Output</h3>
+<pre class="spss-output"><code>Run MATRIX procedure:
+
+***************** PROCESS Procedure for SPSS Version 4.2 *****************
+
+          Written by Andrew F. Hayes, Ph.D.       www.afhayes.com
+    Documentation available in Hayes (2022). www.guilford.com/p/hayes3
+
+**************************************************************************
+Model  : 4
+    Y  : c_discom
+    X  : c_oddity
+    M  : c_expect
+
+Covariates:
+ c_noise
+
+Sample
+Size:  2688
+
+Custom
+Seed:     20260727
+
+**************************************************************************
+OUTCOME VARIABLE:
+ c_expect
+
+Model Summary
+          R       R-sq        MSE     F(HC4)        df1        df2          p
+      .8328      .6935      .8801  3045.8223     2.0000  2685.0000      .0000
+
+Model
+              coeff    se(HC4)          t          p       LLCI       ULCI
+constant     1.4594      .0305    47.8442      .0000     1.3996     1.5193
+c_oddity     2.8207      .0362    77.9417      .0000     2.7497     2.8916
+c_noise       .0067      .0362      .1850      .8532     -.0643      .0777
+
+Standardized coefficients
+              coeff
+c_oddity     1.6652
+c_noise       .0020
+
+**************************************************************************
+OUTCOME VARIABLE:
+ c_discom
+
+Model Summary
+          R       R-sq        MSE     F(HC4)        df1        df2          p
+      .5216      .2721      .8471   315.1988     3.0000  2684.0000      .0000
+
+Model
+              coeff    se(HC4)          t          p       LLCI       ULCI
+constant      .8328      .0361    23.0845      .0000      .7621      .9036
+c_oddity     -.3906      .0612    -6.3821      .0000     -.5106     -.2706
+c_expect      .4120      .0188    21.8756      .0000      .3751      .4490
+c_noise       .2658      .0355     7.4853      .0000      .1962      .3355
+
+Standardized coefficients
+              coeff
+c_oddity     -.3623
+c_expect      .6473
+c_noise       .1233
+
+************************** TOTAL EFFECT MODEL ****************************
+OUTCOME VARIABLE:
+ c_discom
+
+Model Summary
+          R       R-sq        MSE     F(HC4)        df1        df2          p
+      .3790      .1436      .9962   225.1029     2.0000  2685.0000      .0000
+
+Model
+              coeff    se(HC4)          t          p       LLCI       ULCI
+constant     1.4342      .0298    48.1297      .0000     1.3757     1.4926
+c_oddity      .7716      .0385    20.0396      .0000      .6961      .8471
+c_noise       .2686      .0385     6.9762      .0000      .1931      .3441
+
+Standardized coefficients
+              coeff
+c_oddity      .7157
+c_noise       .1246
+
+
+************** TOTAL, DIRECT, AND INDIRECT EFFECTS OF X ON Y **************
+
+Total effect of X on Y
+     Effect    se(HC4)          t          p       LLCI       ULCI       c_ps
+      .7716      .0385    20.0396      .0000      .6961      .8471      .7157
+
+Direct effect of X on Y
+     Effect    se(HC4)          t          p       LLCI       ULCI      c&#x27;_ps
+     -.3906      .0612    -6.3821      .0000     -.5106     -.2706     -.3623
+
+Indirect effect(s) of X on Y:
+             Effect     BootSE   BootLLCI   BootULCI
+c_expect     1.1622      .0560     1.0524     1.2750
+
+Partially standardized indirect effect(s) of X on Y:
+             Effect     BootSE   BootLLCI   BootULCI
+c_expect     1.0780      .0488      .9837     1.1751
+
+*********************** ANALYSIS NOTES AND ERRORS ************************
+
+Level of confidence for all confidence intervals in output:
+  95.0000
+
+Number of bootstrap samples for percentile bootstrap confidence intervals:
+  10000
+
+NOTE: Standardized coefficients for dichotomous or multicategorical X are in
+      partially standardized form.
+
+NOTE: A heteroscedasticity consistent standard error and covariance matrix estimator was used.
+
+------ END MATRIX -----</code></pre>
+</section>
+
+<section id="c3">
+<h2>C3. Sensitivity to the Unit of Analysis</h2>
+
+<p><i>N</i> = 336 participant &times; condition means, each the mean of the eight ratings one participant gave in one condition. The model is otherwise identical to C2, including the fixed random seed (20260727), so the bootstrap interval for the indirect effect can be reproduced exactly.</p>
+
+<h3 class="h5">Syntax</h3>
+<pre class="language-none line-numbers" style="white-space: pre-wrap;"><code
+  >* Encoding: UTF-8.
+PROCESS
+    y=c_discom
+    /x=c_oddity
+    /m=c_expect
+    /cov=c_noise
+    /model=4
+    /boot=10000
+    /conf=95
+    /hc=4
+    /effsize=1
+    /stand=1
+    /total=1
+    /seed=20260727.</code></pre>
+
+<h3 class="h5">Output</h3>
+<pre class="spss-output"><code>Run MATRIX procedure:
+
+***************** PROCESS Procedure for SPSS Version 4.2 *****************
+
+          Written by Andrew F. Hayes, Ph.D.       www.afhayes.com
+    Documentation available in Hayes (2022). www.guilford.com/p/hayes3
+
+**************************************************************************
+Model  : 4
+    Y  : c_discom
+    X  : c_oddity
+    M  : c_expect
+
+Covariates:
+ c_noise
+
+Sample
+Size:  336
+
+Custom
+Seed:     20260727
+
+**************************************************************************
+OUTCOME VARIABLE:
+ c_expect
+
+Model Summary
+          R       R-sq        MSE     F(HC4)        df1        df2          p
+      .9404      .8844      .2624  1285.0705     2.0000   333.0000      .0000
+
+Model
+              coeff    se(HC4)          t          p       LLCI       ULCI
+constant     1.4594      .0472    30.9093      .0000     1.3666     1.5523
+c_oddity     2.8207      .0559    50.4696      .0000     2.7107     2.9306
+c_noise       .0067      .0559      .1198      .9047     -.1032      .1166
+
+Standardized coefficients
+              coeff
+c_oddity     1.8780
+c_noise       .0022
+
+**************************************************************************
+OUTCOME VARIABLE:
+ c_discom
+
+Model Summary
+          R       R-sq        MSE     F(HC4)        df1        df2          p
+      .6414      .4114      .2952    79.4587     3.0000   332.0000      .0000
+
+Model
+              coeff    se(HC4)          t          p       LLCI       ULCI
+constant      .8836      .0895     9.8729      .0000      .7076     1.0597
+c_oddity     -.2924      .1652    -1.7705      .0776     -.6173      .0325
+c_expect      .3772      .0564     6.6931      .0000      .2663      .4881
+c_noise       .2661      .0593     4.4839      .0000      .1493      .3828
+
+Standardized coefficients
+              coeff
+c_oddity     -.4148
+c_expect      .8036
+c_noise       .1890
+
+************************** TOTAL EFFECT MODEL ****************************
+OUTCOME VARIABLE:
+ c_discom
+
+Model Summary
+          R       R-sq        MSE     F(HC4)        df1        df2          p
+      .5803      .3367      .3316    91.1477     2.0000   333.0000      .0000
+
+Model
+              coeff    se(HC4)          t          p       LLCI       ULCI
+constant     1.4342      .0443    32.3440      .0000     1.3469     1.5214
+c_oddity      .7716      .0628    12.2799      .0000      .6480      .8952
+c_noise       .2686      .0628     4.2749      .0000      .1450      .3922
+
+Standardized coefficients
+              coeff
+c_oddity     1.0944
+c_noise       .1908
+
+
+************** TOTAL, DIRECT, AND INDIRECT EFFECTS OF X ON Y **************
+
+Total effect of X on Y
+     Effect    se(HC4)          t          p       LLCI       ULCI       c_ps
+      .7716      .0628    12.2799      .0000      .6480      .8952     1.0944
+
+Direct effect of X on Y
+     Effect    se(HC4)          t          p       LLCI       ULCI      c&#x27;_ps
+     -.2924      .1652    -1.7705      .0776     -.6173      .0325     -.4148
+
+Indirect effect(s) of X on Y:
+             Effect     BootSE   BootLLCI   BootULCI
+c_expect     1.0640      .1575      .7533     1.3734
+
+Partially standardized indirect effect(s) of X on Y:
+             Effect     BootSE   BootLLCI   BootULCI
+c_expect     1.5092      .2106     1.0892     1.9198
+
+*********************** ANALYSIS NOTES AND ERRORS ************************
+
+Level of confidence for all confidence intervals in output:
+  95.0000
+
+Number of bootstrap samples for percentile bootstrap confidence intervals:
+  10000
+
+NOTE: Standardized coefficients for dichotomous or multicategorical X are in
+      partially standardized form.
+
+NOTE: A heteroscedasticity consistent standard error and covariance matrix estimator was used.
+
+------ END MATRIX -----</code></pre>
+</section>
+
+</div>

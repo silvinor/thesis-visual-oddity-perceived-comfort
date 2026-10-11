@@ -83,8 +83,8 @@
     <text x="400" y="250" class="center">.056</text>
     <text x="520" y="250" class="center">[1.052, 1.275]</text>
     <text x="640" y="250" class="center">1.064</text>
-    <text x="740" y="250" class="center">.159</text>
-    <text x="860" y="250" class="center">[0.749, 1.378]</text>
+    <text x="740" y="250" class="center">.158</text>
+    <text x="860" y="250" class="center">[0.753, 1.373]</text>
 
     <line x1="18" y1="262" x2="922" y2="262" class="thick" />
 </svg>

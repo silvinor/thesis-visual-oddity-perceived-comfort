@@ -119,7 +119,9 @@
 
     ![](assets/recreate/28b.png)
 
-- For a reproducible bootstrap interval, run the model from the designated Syntax Window with the same fixed seed used in [recreate3.md](recreate3.md):
+- ***Note:*** I found that running the PROCESS command from Syntax as first thing crashes the model, reporting incorrect syntax. I assume the module is not loaded yet and causes there error. But, I did find that running from the dialog first, then the Syntax has no issue.
+
+- For a reproducible bootstrap interval, the model was re-run from the designated Syntax Window with the same fixed seed used in [recreate3.md](recreate3.md) (saved as `spss/Syntax4.sps`):
 
     ```txt
     PROCESS
@@ -139,12 +141,12 @@
 
 ### Results and comparison
 
-- Check the PROCESS header for **Sample Size: 336**. Read paths *a* and *b* from the mediator and outcome models, *c* and *c′* from the total and direct effect tables, and the bootstrap bounds for *a×b* from Indirect effect(s) of X on Y.
+- Check the PROCESS header for **Sample Size: 336** and **Custom Seed: 20260727**. Read paths *a* and *b* from the mediator and outcome models, *c* and *c′* from the total and direct effect tables, and the bootstrap bounds for *a×b* from Indirect effect(s) of X on Y.
 
     ![](assets/recreate/29a.png)
     ![](assets/recreate/29b.png)
 
-- The screenshots record the available PROCESS output. A fresh run with the fixed-seed syntax above may give slightly different bootstrap bounds; compare the output from that run when reporting a reproducible interval.
+- The screenshots are from the fixed-seed run above (the second run in `spss/Output4b.spv`), so re-running the syntax reproduces these bootstrap bounds exactly. An earlier run without a seed gave BootSE .1593 and CI [.7492, 1.3783]; the conclusions are the same.
 
 | Path | Effect | *SE* (HC4 or BootSE) | 95% CI | *p* |
 |---|---:|---:|:---:|:---:|
@@ -152,7 +154,7 @@
 | *b* (unexpectedness → discomfort, controlling oddity) | 0.3772 | 0.0564 | [0.2663, 0.4881] | < .001 |
 | *c* (total) | 0.7716 | 0.0628 | [0.6480, 0.8952] | < .001 |
 | *c′* (direct) | −0.2924 | 0.1652 | [−0.6173, 0.0325] | .078 |
-| *a×b* (indirect) | 1.0640 | 0.1593 (BootSE) | [0.7492, 1.3783] | — |
+| *a×b* (indirect) | 1.0640 | 0.1575 (BootSE) | [0.7533, 1.3734] | — |
 
 - The indirect-effect interval still excludes zero, so the mediation finding holds in this sensitivity run. The direct path remains negative but its interval now includes zero. Paths *a* and *c* retain the same point estimates as the pooled-rating model because the design is balanced; their standard errors increase. Path *b* and *c′* also change because averaging removes within-condition variation in unexpectedness.
 - Compare these values with the pooled-rating paths in [recreate3.md](recreate3.md). If reporting this optional analysis, label the 336 observations as **participant × condition means**, state that each participant appears four times, and note that this run does not fully adjust inference for repeated measures across conditions.
