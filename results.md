@@ -7,11 +7,7 @@ The analyses reported below examine whether visual oddity changes participants' 
 
 ## Participant Flow and Data Screening
 
-A total of 87 participants were recruited. Two were excluded because their sessions were not fully processed by the hosting platform and returned no usable data, and one for inattentive responding, having failed four of the five attention checks embedded in the other studies in the combined battery. The analysed sample comprised 84 participants (45 women, 39 men) aged 18 to 69 years (*M* = 40.87, *SD* = 12.86; Figure 4).
-
-**Figure 4** <br>
-*Participant Flow from Recruitment to Analysed Sample* <br>
-![Flow diagram showing 87 participants recruited, three excluded, and 84 retained contributing 2,688 ratings](./assets/tables-figures/participant-flow.svg) <br>
+A total of 87 participants were recruited. Two were excluded because their sessions were not fully processed by the hosting platform and returned no usable data, and one for inattentive responding, having failed four of the five attention checks embedded in the other studies in the combined battery. The analysed sample comprised 84 participants (45 women, 39 men) aged 18 to 69 years (*M* = 40.87, *SD* = 12.86; see Figure 4).
 
 Because both rating items required a response before the task would advance, the retained sessions contained no missing item-level data, and each participant completed all 32 trials, yielding 2,688 ratings. Cross-tabulation confirmed a fully balanced design, with 672 ratings in each condition and eight per condition per participant. No ratings were excluded as outliers; both measures being bounded scales on which no value could fall out of range.
 
