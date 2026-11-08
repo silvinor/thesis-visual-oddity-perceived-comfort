@@ -1,8 +1,9 @@
-<svg viewBox="0 0 460 123" width="460" height="123" xmlns="http://www.w3.org/2000/svg" role="img">
-    <title id="ttl">Experimental conditions table</title>
-    <desc id="dsc">APA-7 formatted 2x2 table of experimental conditions crossing noise level (low, high) with stimulus type (normal, oddity).</desc>
+<svg viewBox="0 0 920 246" width="920" height="246" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title id="ttl">Experimental conditions table</title>
+  <desc id="dsc">APA-7 formatted 2x2 table of experimental conditions crossing noise level (low,
+    high) with stimulus type (normal, oddity).</desc>
 
-    <style>
+  <style>
         rect, line, polygon { stroke: #111; }
         polygon, text { fill: #111; }
 
@@ -13,7 +14,7 @@
 
         text {
             font-family: "Times New Roman", Times, serif;
-            font-size: 12pt;
+            font-size: 24pt;
         }
         line {
             stroke-linecap: round;
@@ -23,35 +24,35 @@
         .bold { font-weight: bold; }
         .left { text-anchor: start; }
         .center { text-anchor: middle; }
-        .small { font-size: 9pt; }
+        .small { font-size: 18pt; }
         .bg { fill: transparent; }
 
-        .thick { stroke-width: 1.25; }
-        .thin { stroke-width: 0.75; }
+        .thick { stroke-width: 2.5; }
+        .thin { stroke-width: 1.5; }
     </style>
 
-    <rect x="0" y="0" width="460" height="123" rx="16" stroke-width="0.001" class="bg" />
+    <rect x="0" y="0" width="920" height="246" rx="32" stroke-width="0.002" class="bg" />
 
-    <!-- Top rule: 14pt (~18px) from top edge -->
-    <line x1="18" y1="18" x2="442" y2="18" class="thick" />
+    <!-- Top rule: 28pt (~36px) from top edge -->
+    <line x1="36" y1="36" x2="884" y2="36" class="thick" />
 
     <!-- Column headers -->
-    <text x="180" y="38" class="center bold">Low Noise</text>
-    <text x="340" y="38" class="center bold">High Noise</text>
+    <text x="360" y="76" class="center bold">Low Noise</text>
+    <text x="680" y="76" class="center bold">High Noise</text>
 
     <!-- Header rule -->
-    <line x1="18" y1="48" x2="442" y2="48" class="thin" />
+    <line x1="36" y1="96" x2="884" y2="96" class="thin" />
 
     <!-- Row 1: Normal -->
-    <text x="18" y="67" class="left bold">Normal</text>
-    <text x="180" y="67" class="center">Low noise, normal</text>
-    <text x="340" y="67" class="center">High noise, normal</text>
+    <text x="36" y="134" class="left bold">Normal</text>
+    <text x="360" y="134" class="center">Low noise, normal</text>
+    <text x="680" y="134" class="center">High noise, normal</text>
 
     <!-- Row 2: Oddity -->
-    <text x="18" y="95" class="left bold">Oddity</text>
-    <text x="180" y="95" class="center">Low noise + oddity</text>
-    <text x="340" y="95" class="center">High noise + oddity</text>
+    <text x="36" y="190" class="left bold">Oddity</text>
+    <text x="360" y="190" class="center">Low noise + oddity</text>
+    <text x="680" y="190" class="center">High noise + oddity</text>
 
-    <!-- Bottom rule: 14pt (~18px) from bottom edge -->
-    <line x1="18" y1="104" x2="442" y2="104" class="thick" />
+    <!-- Bottom rule: 28pt (~36px) from bottom edge -->
+    <line x1="36" y1="208" x2="884" y2="208" class="thick" />
 </svg>

@@ -1,16 +1,16 @@
-<svg viewBox="23 17 585 339" width="585" height="339" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg viewBox="46 34 1170 678" width="1170" height="678" xmlns="http://www.w3.org/2000/svg" role="img">
     <title id="ttl">Mean discomfort by oddity condition and activity level</title>
     <desc id="dsc">Grouped bar chart of mean discomfort rating for No oddity vs Oddity conditions, split by Low vs High activity, with 95% CI error bars.</desc>
 
     <defs>
-        <pattern id="dots" class="s3" width="4" height="4" patternUnits="userSpaceOnUse" stroke-width="0">
-            <rect x="0" y="0" width="4" height="4" />
-            <circle cx="1" cy="1" r=".01" stroke-width="1" />
-            <circle cx="3" cy="3" r=".01" stroke-width="1" />
+        <pattern id="dots" class="s3" width="8" height="8" patternUnits="userSpaceOnUse" stroke-width="0">
+            <rect x="0" y="0" width="8" height="8" />
+            <circle cx="2" cy="2" r=".02" stroke-width="2" />
+            <circle cx="6" cy="6" r=".02" stroke-width="2" />
         </pattern>
-        <pattern id="hatch" class="sA" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)" stroke-width="0">
-            <rect x="0" y="0" width="4" height="4" />
-            <line x1="0" y1="0" x2="4" y2="0" stroke-width="2" />
+        <pattern id="hatch" class="sA" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)" stroke-width="0">
+            <rect x="0" y="0" width="8" height="8" />
+            <line x1="0" y1="0" x2="8" y2="0" stroke-width="4" />
         </pattern>
     </defs>
     
@@ -43,7 +43,7 @@
 
         text {
             font-family: "Times New Roman", Times, serif;
-            font-size: 12pt;
+            font-size: 24pt;
         }
         line {
             stroke-linecap: round;
@@ -54,19 +54,19 @@
         .left { text-anchor: start; }
         .right { text-anchor: end; }
         .center { text-anchor: middle; }
-        .small { font-size: 9pt; }
+        .small { font-size: 18pt; }
         .bg { fill: transparent; }
 
-        .thick { stroke-width: 1.25; }
-        .thin { stroke-width: 0.75; }
+        .thick { stroke-width: 2.5; }
+        .thin { stroke-width: 1.5; }
 
         .bar1 { fill: url(#dots); }
         .bar2 { fill: url(#hatch); }
-        .grid { stroke-width: .5; opacity: 0.15; }
-        .axis { stroke-width: 1.25; }
-        .tick { stroke-width: .75; }
-        .err_halo { stroke-width: 4.5; }
-        .err_line { stroke-width: 1.5; }
+        .grid { stroke-width: 1; opacity: 0.15; }
+        .axis { stroke-width: 2.5; }
+        .tick { stroke-width: 1.5; }
+        .err_halo { stroke-width: 9; }
+        .err_line { stroke-width: 3; }
 
         .s1 { stroke: #817; } .f1 { fill: #817; }
         .s2 { stroke: #a35; } .f2 { fill: #a35; }
@@ -83,82 +83,82 @@
         .sX { stroke: #777; } .fX { fill: #777; }
     </style>
 
-    <rect x="23" y="17" width="585" height="339" rx="16" stroke-width="0.001" class="bg" />
+    <rect x="46" y="34" width="1170" height="678" rx="32" stroke-width="0.002" class="bg" />
 
     <!-- Gridlines -->
-    <line x1="90" y1="270" x2="590" y2="270" class="grid" />
-    <line x1="90" y1="230" x2="590" y2="230" class="grid" />
-    <line x1="90" y1="190" x2="590" y2="190" class="grid" />
-    <line x1="90" y1="150" x2="590" y2="150" class="grid" />
-    <line x1="90" y1="110" x2="590" y2="110" class="grid" />
-    <line x1="90" y1="70"  x2="590" y2="70"  class="grid" />
+    <line x1="180" y1="540" x2="1180" y2="540" class="grid" />
+    <line x1="180" y1="460" x2="1180" y2="460" class="grid" />
+    <line x1="180" y1="380" x2="1180" y2="380" class="grid" />
+    <line x1="180" y1="300" x2="1180" y2="300" class="grid" />
+    <line x1="180" y1="220" x2="1180" y2="220" class="grid" />
+    <line x1="180" y1="140" x2="1180" y2="140" class="grid" />
 
     <!-- Y ticks + labels -->
-    <line x1="85" y1="310" x2="90" y2="310" class="tick" />
-    <line x1="85" y1="270" x2="90" y2="270" class="tick" />
-    <line x1="85" y1="230" x2="90" y2="230" class="tick" />
-    <line x1="85" y1="190" x2="90" y2="190" class="tick" />
-    <line x1="85" y1="150" x2="90" y2="150" class="tick" />
-    <line x1="85" y1="110" x2="90" y2="110" class="tick" />
-    <line x1="85" y1="70"  x2="90" y2="70"  class="tick" />
-    <text x="82" y="314" class="right">1.0</text>
-    <text x="82" y="274" class="right">1.5</text>
-    <text x="82" y="234" class="right">2.0</text>
-    <text x="82" y="194" class="right">2.5</text>
-    <text x="82" y="154" class="right">3.0</text>
-    <text x="82" y="114" class="right">3.5</text>
-    <text x="82" y="74"  class="right">4.0</text>
+    <line x1="170" y1="620" x2="180" y2="620" class="tick" />
+    <line x1="170" y1="540" x2="180" y2="540" class="tick" />
+    <line x1="170" y1="460" x2="180" y2="460" class="tick" />
+    <line x1="170" y1="380" x2="180" y2="380" class="tick" />
+    <line x1="170" y1="300" x2="180" y2="300" class="tick" />
+    <line x1="170" y1="220" x2="180" y2="220" class="tick" />
+    <line x1="170" y1="140"  x2="180" y2="140"  class="tick" />
+    <text x="164" y="628" class="right">1.0</text>
+    <text x="164" y="548" class="right">1.5</text>
+    <text x="164" y="468" class="right">2.0</text>
+    <text x="164" y="388" class="right">2.5</text>
+    <text x="164" y="308" class="right">3.0</text>
+    <text x="164" y="228" class="right">3.5</text>
+    <text x="164" y="148"  class="right">4.0</text>
 
-    <text class="center" transform="rotate(-90 48 190)" x="48" y="190">Mean discomfort rating</text>
+    <text class="center" transform="rotate(-90 96 380)" x="96" y="380">Mean discomfort rating</text>
 
     <!-- Bars: No oddity (band center 215) -->
-    <path d="M126,310 L126,278 Q126,272 132,272 L208,272 Q214,272 214,278 L214,310 Z" class="bar1 s3" />
-    <path d="M216,310 L216,263 Q216,257 222,257 L298,257 Q304,257 304,263 L304,310 Z" class="bar2 sA" />
+    <path d="M252,620 L252,556 Q252,544 264,544 L416,544 Q428,544 428,556 L428,620 Z" class="bar1 s3" />
+    <path d="M432,620 L432,526 Q432,514 444,514 L596,514 Q608,514 608,526 L608,620 Z" class="bar2 sA" />
 
     <!-- Bars: Oddity (band center 465) -->
-    <path d="M376,310 L376,222 Q376,216 382,216 L458,216 Q464,216 464,222 L464,310 Z" class="bar1 s3" />
-    <path d="M466,310 L466,195 Q466,189 472,189 L548,189 Q554,189 554,195 L554,310 Z" class="bar2 sA" />
+    <path d="M752,620 L752,444 Q752,432 764,432 L916,432 Q928,432 928,444 L928,620 Z" class="bar1 s3" />
+    <path d="M932,620 L932,390 Q932,378 944,378 L1096,378 Q1108,378 1108,390 L1108,620 Z" class="bar2 sA" />
 
     <!-- Axes -->
-    <line x1="90" y1="70" x2="90" y2="310" class="axis" />
-    <line x1="90" y1="310" x2="590" y2="310" class="axis" />
+    <line x1="180" y1="140" x2="180" y2="620" class="axis" />
+    <line x1="180" y1="620" x2="1180" y2="620" class="axis" />
 
     <!-- Error bars (95% CI), white halo first so they read against the dark bar -->
-    <line x1="170" y1="277" x2="170" y2="267" class="err_halo invert" />
-    <line x1="160" y1="277" x2="180" y2="277" class="err_halo invert" />
-    <line x1="160" y1="267" x2="180" y2="267" class="err_halo invert" />
-    <line x1="170" y1="277" x2="170" y2="267" class="err_line sX" />
-    <line x1="160" y1="277" x2="180" y2="277" class="err_line sX" />
-    <line x1="160" y1="267" x2="180" y2="267" class="err_line sX" />
+    <line x1="340" y1="554" x2="340" y2="534" class="err_halo invert" />
+    <line x1="320" y1="554" x2="360" y2="554" class="err_halo invert" />
+    <line x1="320" y1="534" x2="360" y2="534" class="err_halo invert" />
+    <line x1="340" y1="554" x2="340" y2="534" class="err_line sX" />
+    <line x1="320" y1="554" x2="360" y2="554" class="err_line sX" />
+    <line x1="320" y1="534" x2="360" y2="534" class="err_line sX" />
 
-    <line x1="260" y1="262" x2="260" y2="252" class="err_halo invert" />
-    <line x1="250" y1="262" x2="270" y2="262" class="err_halo invert" />
-    <line x1="250" y1="252" x2="270" y2="252" class="err_halo invert" />
-    <line x1="260" y1="262" x2="260" y2="252" class="err_line sX" />
-    <line x1="250" y1="262" x2="270" y2="262" class="err_line sX" />
-    <line x1="250" y1="252" x2="270" y2="252" class="err_line sX" />
+    <line x1="520" y1="524" x2="520" y2="504" class="err_halo invert" />
+    <line x1="500" y1="524" x2="540" y2="524" class="err_halo invert" />
+    <line x1="500" y1="504" x2="540" y2="504" class="err_halo invert" />
+    <line x1="520" y1="524" x2="520" y2="504" class="err_line sX" />
+    <line x1="500" y1="524" x2="540" y2="524" class="err_line sX" />
+    <line x1="500" y1="504" x2="540" y2="504" class="err_line sX" />
 
-    <line x1="420" y1="224" x2="420" y2="210" class="err_halo invert" />
-    <line x1="410" y1="224" x2="430" y2="224" class="err_halo invert" />
-    <line x1="410" y1="210" x2="430" y2="210" class="err_halo invert" />
-    <line x1="420" y1="224" x2="420" y2="210" class="err_line sX" />
-    <line x1="410" y1="224" x2="430" y2="224" class="err_line sX" />
-    <line x1="410" y1="210" x2="430" y2="210" class="err_line sX" />
+    <line x1="840" y1="448" x2="840" y2="420" class="err_halo invert" />
+    <line x1="820" y1="448" x2="860" y2="448" class="err_halo invert" />
+    <line x1="820" y1="420" x2="860" y2="420" class="err_halo invert" />
+    <line x1="840" y1="448" x2="840" y2="420" class="err_line sX" />
+    <line x1="820" y1="448" x2="860" y2="448" class="err_line sX" />
+    <line x1="820" y1="420" x2="860" y2="420" class="err_line sX" />
 
-    <line x1="510" y1="196" x2="510" y2="182" class="err_halo invert" />
-    <line x1="500" y1="196" x2="520" y2="196" class="err_halo invert" />
-    <line x1="500" y1="182" x2="520" y2="182" class="err_halo invert" />
-    <line x1="510" y1="196" x2="510" y2="182" class="err_line sX" />
-    <line x1="500" y1="196" x2="520" y2="196" class="err_line sX" />
-    <line x1="500" y1="182" x2="520" y2="182" class="err_line sX" />
+    <line x1="1020" y1="392" x2="1020" y2="364" class="err_halo invert" />
+    <line x1="1000" y1="392" x2="1040" y2="392" class="err_halo invert" />
+    <line x1="1000" y1="364" x2="1040" y2="364" class="err_halo invert" />
+    <line x1="1020" y1="392" x2="1020" y2="364" class="err_line sX" />
+    <line x1="1000" y1="392" x2="1040" y2="392" class="err_line sX" />
+    <line x1="1000" y1="364" x2="1040" y2="364" class="err_line sX" />
 
     <!-- X category labels -->
-    <text x="215" y="334" class="center">No oddity</text>
-    <text x="465" y="334" class="center">Oddity present</text>
+    <text x="430" y="668" class="center">No oddity</text>
+    <text x="930" y="668" class="center">Oddity present</text>
 
     <!-- Legend -->
-    <rect x="355" y="37" width="12" height="12" rx="2" class="bar1 s3" />
-    <text x="373" y="47" class="left">Low activity</text>
-    <rect x="482" y="37" width="12" height="12" rx="2" class="bar2 sA" />
-    <text x="500" y="47" class="left">High activity</text>
+    <rect x="710" y="74" width="24" height="24" rx="4" class="bar1 s3" />
+    <text x="746" y="94" class="left">Low activity</text>
+    <rect x="964" y="74" width="24" height="24" rx="4" class="bar2 sA" />
+    <text x="1000" y="94" class="left">High activity</text>
 </svg>

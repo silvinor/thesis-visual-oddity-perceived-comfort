@@ -1,4 +1,4 @@
-<svg viewBox="0 0 940 282" width="940" height="282" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg viewBox="0 0 1880 564" width="1880" height="564" xmlns="http://www.w3.org/2000/svg" role="img">
     <title id="ttl">Mediation path estimates at two units of analysis</title>
     <desc id="dsc">APA-7 formatted table comparing the a, b, c, c-prime and indirect effect estimates, standard errors and 95% confidence intervals at the trial level and at the participant by condition level.</desc>
 
@@ -13,78 +13,78 @@
 
         text {
             font-family: "Times New Roman", Times, serif;
-            font-size: 12pt;
+            font-size: 24pt;
         }
         line { stroke-linecap: round; stroke-linejoin: miter; }
         .italic { font-style: italic; }
         .bold { font-weight: bold; }
         .left { text-anchor: start; }
         .center { text-anchor: middle; }
-        .small { font-size: 9pt; }
+        .small { font-size: 18pt; }
         .bg { fill: transparent; }
-        .thick { stroke-width: 1.25; }
-        .thin { stroke-width: 0.75; }
+        .thick { stroke-width: 2.5; }
+        .thin { stroke-width: 1.5; }
     </style>
 
-    <rect x="0" y="0" width="940" height="282" rx="16" class="bg" stroke-width="0.001" />
+    <rect x="0" y="0" width="1880" height="564" rx="32" class="bg" stroke-width="0.002" />
 
-    <line x1="18" y1="18" x2="922" y2="18" class="thick" />
-    <text x="410" y="38" class="center bold">Trial</text>
-    <text x="410" y="54" class="center small">2,688 ratings</text>
-    <line x1="260" y1="64" x2="582" y2="64" class="thin" />
-    <text x="750" y="38" class="center bold">Participant &#x00D7; condition</text>
-    <text x="750" y="54" class="center small">336 condition means</text>
-    <line x1="600" y1="64" x2="922" y2="64" class="thin" />
-    <text x="18" y="84" class="left bold">Path</text>
-    <text x="300" y="84" class="center bold">Effect</text>
-    <text x="400" y="84" class="center bold italic">SE</text>
-    <text x="520" y="84" class="center bold">95% CI</text>
-    <text x="640" y="84" class="center bold">Effect</text>
-    <text x="740" y="84" class="center bold italic">SE</text>
-    <text x="860" y="84" class="center bold">95% CI</text>
-    <line x1="18" y1="94" x2="922" y2="94" class="thick" />
+    <line x1="36" y1="36" x2="1844" y2="36" class="thick" />
+    <text x="820" y="76" class="center bold">Trial</text>
+    <text x="820" y="108" class="center small">2,688 ratings</text>
+    <line x1="520" y1="128" x2="1164" y2="128" class="thin" />
+    <text x="1500" y="76" class="center bold">Participant &#x00D7; condition</text>
+    <text x="1500" y="108" class="center small">336 condition means</text>
+    <line x1="1200" y1="128" x2="1844" y2="128" class="thin" />
+    <text x="36" y="168" class="left bold">Path</text>
+    <text x="600" y="168" class="center bold">Effect</text>
+    <text x="800" y="168" class="center bold italic">SE</text>
+    <text x="1040" y="168" class="center bold">95% CI</text>
+    <text x="1280" y="168" class="center bold">Effect</text>
+    <text x="1480" y="168" class="center bold italic">SE</text>
+    <text x="1720" y="168" class="center bold">95% CI</text>
+    <line x1="36" y1="188" x2="1844" y2="188" class="thick" />
 
-    <text x="18" y="122" class="left"><tspan class="italic">a</tspan> &#8212; oddity &#8594; unexpectedness</text>
-    <text x="300" y="122" class="center">2.821</text>
-    <text x="400" y="122" class="center">.036</text>
-    <text x="520" y="122" class="center">[2.750, 2.892]</text>
-    <text x="640" y="122" class="center">2.821</text>
-    <text x="740" y="122" class="center">.056</text>
-    <text x="860" y="122" class="center">[2.711, 2.931]</text>
+    <text x="36" y="244" class="left"><tspan class="italic">a</tspan> &#8212; oddity &#8594; unexpectedness</text>
+    <text x="600" y="244" class="center">2.821</text>
+    <text x="800" y="244" class="center">.036</text>
+    <text x="1040" y="244" class="center">[2.750, 2.892]</text>
+    <text x="1280" y="244" class="center">2.821</text>
+    <text x="1480" y="244" class="center">.056</text>
+    <text x="1720" y="244" class="center">[2.711, 2.931]</text>
 
-    <text x="18" y="154" class="left"><tspan class="italic">b</tspan> &#8212; unexpectedness &#8594; discomfort</text>
+    <text x="36" y="308" class="left"><tspan class="italic">b</tspan> &#8212; unexpectedness &#8594; discomfort</text>
     <!-- <text x="18" y="154" class="left italic">b</text>
     <text x="52" y="154" class="left small">Unexpectedness → discomfort</text> -->
-    <text x="300" y="154" class="center">0.412</text>
-    <text x="400" y="154" class="center">.019</text>
-    <text x="520" y="154" class="center">[0.375, 0.449]</text>
-    <text x="640" y="154" class="center">0.377</text>
-    <text x="740" y="154" class="center">.056</text>
-    <text x="860" y="154" class="center">[0.266, 0.488]</text>
+    <text x="600" y="308" class="center">0.412</text>
+    <text x="800" y="308" class="center">.019</text>
+    <text x="1040" y="308" class="center">[0.375, 0.449]</text>
+    <text x="1280" y="308" class="center">0.377</text>
+    <text x="1480" y="308" class="center">.056</text>
+    <text x="1720" y="308" class="center">[0.266, 0.488]</text>
 
-    <text x="18" y="186" class="left"><tspan class="italic">c</tspan> &#8212; total effect of oddity</text>
-    <text x="300" y="186" class="center">0.772</text>
-    <text x="400" y="186" class="center">.039</text>
-    <text x="520" y="186" class="center">[0.696, 0.847]</text>
-    <text x="640" y="186" class="center">0.772</text>
-    <text x="740" y="186" class="center">.063</text>
-    <text x="860" y="186" class="center">[0.648, 0.895]</text>
+    <text x="36" y="372" class="left"><tspan class="italic">c</tspan> &#8212; total effect of oddity</text>
+    <text x="600" y="372" class="center">0.772</text>
+    <text x="800" y="372" class="center">.039</text>
+    <text x="1040" y="372" class="center">[0.696, 0.847]</text>
+    <text x="1280" y="372" class="center">0.772</text>
+    <text x="1480" y="372" class="center">.063</text>
+    <text x="1720" y="372" class="center">[0.648, 0.895]</text>
 
-    <text x="18" y="218" class="left"><tspan class="italic">c&#8242;</tspan> &#8212; direct effect of oddity</text>
-    <text x="300" y="218" class="center">−0.391</text>
-    <text x="400" y="218" class="center">.061</text>
-    <text x="520" y="218" class="center">[−0.511, −0.271]</text>
-    <text x="640" y="218" class="center">−0.292</text>
-    <text x="740" y="218" class="center">.165</text>
-    <text x="860" y="218" class="center">[−0.617, 0.033]</text>
+    <text x="36" y="436" class="left"><tspan class="italic">c&#8242;</tspan> &#8212; direct effect of oddity</text>
+    <text x="600" y="436" class="center">−0.391</text>
+    <text x="800" y="436" class="center">.061</text>
+    <text x="1040" y="436" class="center">[−0.511, −0.271]</text>
+    <text x="1280" y="436" class="center">−0.292</text>
+    <text x="1480" y="436" class="center">.165</text>
+    <text x="1720" y="436" class="center">[−0.617, 0.033]</text>
 
-    <text x="18" y="250" class="left"><tspan class="italic">a&#x00D7;b</tspan> &#8212; indirect effect</text>
-    <text x="300" y="250" class="center">1.162</text>
-    <text x="400" y="250" class="center">.056</text>
-    <text x="520" y="250" class="center">[1.052, 1.275]</text>
-    <text x="640" y="250" class="center">1.064</text>
-    <text x="740" y="250" class="center">.158</text>
-    <text x="860" y="250" class="center">[0.753, 1.373]</text>
+    <text x="36" y="500" class="left"><tspan class="italic">a&#x00D7;b</tspan> &#8212; indirect effect</text>
+    <text x="600" y="500" class="center">1.162</text>
+    <text x="800" y="500" class="center">.056</text>
+    <text x="1040" y="500" class="center">[1.052, 1.275]</text>
+    <text x="1280" y="500" class="center">1.064</text>
+    <text x="1480" y="500" class="center">.158</text>
+    <text x="1720" y="500" class="center">[0.753, 1.373]</text>
 
-    <line x1="18" y1="262" x2="922" y2="262" class="thick" />
+    <line x1="36" y1="524" x2="1844" y2="524" class="thick" />
 </svg>

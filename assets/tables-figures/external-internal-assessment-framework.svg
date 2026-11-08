@@ -1,8 +1,10 @@
-<svg viewBox="0 0 806 228" width="806" height="228" xmlns="http://www.w3.org/2000/svg" role="img">
-    <title id="ttl">External and internal assessment applied to visual oddity</title>
-    <desc id="dsc">A scene containing an out-of-place element is read by the observer as unexpected (external assessment), which in turn shapes the emotional response to the scene (internal assessment), measured here as self-reported comfort.</desc>
+<svg viewBox="0 0 1612 456" width="1612" height="456" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title id="ttl">External and internal assessment applied to visual oddity</title>
+  <desc id="dsc">A scene containing an out-of-place element is read by the observer as unexpected
+    (external assessment), which in turn shapes the emotional response to the scene (internal
+    assessment), measured here as self-reported comfort.</desc>
 
-    <style>
+  <style>
         rect, line, polygon { stroke: #111; }
         polygon, text { fill: #111; }
 
@@ -13,24 +15,21 @@
 
         text {
             font-family: "Times New Roman", Times, serif;
-            font-size: 12pt;
+            font-size: 24pt;
         }
         line {
             stroke-linecap: round;
             stroke-linejoin: miter;
         }
-        rect {
-            fill: none;
-            rx: 8;
-        }
         .italic { font-style: italic; }
+        .left { text-anchor: start; }
         .center { text-anchor: middle; }
-        .small { font-size: 9pt; }
+        .small { font-size: 18pt; }
         .bg { fill: transparent; }
 
-        .thick { stroke-width: 2; }
-        .thin { stroke-width: 0.75; }
-        .dashed { stroke-dasharray: 8 8; }
+        .thick { stroke-width: 4; }
+        .thin { stroke-width: 1.5; }
+        .dashed { stroke-dasharray: 16 16; }
 
         .s1 { stroke: #817; } .f1 { fill: #817; }
         .s2 { stroke: #a35; } .f2 { fill: #a35; }
@@ -45,50 +44,61 @@
         .sB { stroke: #36b; } .fB { fill: #36b; }
         .sC { stroke: #639; } .fC { fill: #639; }
     </style>
-    <defs>
-        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10"
                 markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <polygon points="0,0 10,5 0,10" style="fill: context-fill; stroke: context-stroke" />
-        </marker>
-    </defs>
+      <polygon points="0,0 20,10 0,20" style="fill: context-fill; stroke: context-stroke" />
+    </marker>
+  </defs>
 
-    <rect x="0" y="0" width="806" height="228" stroke-width="0.001" class="bg" />
+  <rect x="0" y="0" width="1612" height="456" stroke-width="0.002" class="bg" />
 
-    <!-- Stimulus -->
-    <rect class="thin" x="16" y="82" width="176" height="64" />
-    <text class="center" x="104" y="108">Scene with an</text>
-    <text class="center" x="104" y="130">out-of-place element</text>
+  <!-- Stimulus -->
+  <rect class="thin" x="32" y="164" width="352" height="128" rx="16" fill="none" />
+  <text class="center" x="208" y="216">Scene with an</text>
+  <text class="center" x="208" y="260">out-of-place element</text>
 
-    <!-- External assessment -->
-    <rect class="thin" x="288" y="18" width="200" height="64" />
-    <text class="center italic" x="388" y="44">External assessment</text>
-    <text class="center small" x="388" y="66">Perceived unexpectedness</text>
+  <!-- External assessment -->
+  <rect class="thin" x="576" y="36" width="400" height="128" rx="16" fill="none" />
+  <text class="center italic" x="776" y="88">External assessment</text>
+  <text class="center small" x="776" y="132">Perceived unexpectedness</text>
 
-    <!-- Internal assessment -->
-    <rect class="thin" x="288" y="146" width="200" height="64" />
-    <text class="center italic" x="388" y="172">Internal assessment</text>
-    <text class="center small" x="388" y="194">Affective response</text>
+  <!-- Internal assessment -->
+  <rect class="thin" x="576" y="292" width="400" height="128" rx="16" fill="none" />
+  <text class="center italic" x="776" y="344">Internal assessment</text>
+  <text class="center small" x="776" y="388">Affective response</text>
 
-    <!-- Outcome -->
-    <rect class="thin" x="584" y="146" width="206" height="64" />
-    <text class="center" x="687" y="172">Self-reported discomfort</text>
-    <text class="center small" x="687" y="194">Five-point scale</text>
+  <!-- Outcome -->
+  <rect class="thin" x="1168" y="292" width="412" height="128" rx="16" fill="none" />
+  <text class="center" x="1374" y="344">Self-reported discomfort</text>
+  <text class="center small" x="1374" y="388">Five-point scale</text>
 
-    <!-- Stimulus to external -->
-    <line class="thick s9 f9" x1="195" y1="106" x2="285" y2="54" marker-end="url(#arrow)" />
+  <!-- Stimulus to external -->
+  <line class="thick s9 f9" x1="390" y1="212" x2="570" y2="108" marker-end="url(#arrow)" />
 
-    <!-- Stimulus to internal (direct path) -->
-    <line class="thick dashed s4 f4" x1="195" y1="124" x2="285" y2="176" marker-end="url(#arrow)" />
+  <!-- Stimulus to internal (direct path) -->
+  <line class="thick dashed s4 f4" x1="390" y1="248" x2="570" y2="352" marker-end="url(#arrow)" />
 
-    <!-- External to internal -->
-    <line class="thick s9 f9" x1="388" y1="85" x2="388" y2="142" marker-end="url(#arrow)" />
+  <!-- External to internal -->
+  <line class="thick s9 f9" x1="776" y1="170" x2="776" y2="284" marker-end="url(#arrow)" />
 
-    <!-- Internal to outcome -->
-    <line class="thick s4 f4" x1="491" y1="178" x2="581" y2="178" marker-end="url(#arrow)" />
+  <!-- Internal to outcome -->
+  <line class="thick s4 f4" x1="982" y1="356" x2="1162" y2="356" marker-end="url(#arrow)" />
 
-    <text class="small center" x="232" y="44">reads as</text>
-    <text class="small center" x="232" y="58">incongruent</text>
-    <text class="small center" x="414" y="118">shapes</text>
-    <text class="small center" x="222" y="178">direct affective</text>
-    <text class="small center" x="222" y="192">route</text>
+  <text class="small center" x="464" y="88">reads as</text>
+  <text class="small center" x="464" y="116">incongruent</text>
+  <text class="small center" x="828" y="236">shapes</text>
+  <text class="small center" x="444" y="356">direct affective</text>
+  <text class="small center" x="444" y="384">route</text>
+
+  <!-- Legend / Key -->
+  <g style="opacity:0.75">
+    <xxx_rect x="1150" y="36" width="430" height="116" class="thin" rx="4" fill="none" />
+    <line x1="1196" y1="66" x2="1266" y2="66" marker-end="url(#arrow)" class="thick s9 f9" />
+    <line x1="1196" y1="96" x2="1266" y2="96" marker-end="url(#arrow)" class="thick dashed s4 f4" />
+    <line x1="1196" y1="126" x2="1266" y2="126" marker-end="url(#arrow)" class="thick s4 f4" />
+    <text x="1280" y="72" class="left f9 small">Via external assessment</text>
+    <text x="1280" y="102" class="left f4 small">Direct affective route</text>
+    <text x="1280" y="132" class="left f4 small">Measured by self-report</text>
+  </g>
 </svg>
