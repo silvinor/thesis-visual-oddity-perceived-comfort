@@ -33,11 +33,11 @@
 ### Thesis supporting and origin files
 
 - **Documentation on how to reproduce the results**
-    - `recreate0.md` - Explains the data export and cleaning steps.
-    - `recreate1.md` - Explains the descriptive statistics analysis.
-    - `recreate2.md` - Explains the H1 and H2 analysis.
-    - `recreate3.md` - Explains the H3 mediation analysis.
-    - `recreate4.md` - Explains the participant-level analyses.
+    - [`recreate0.md`](recreate0.md) - Explains the data export and cleaning steps.
+    - [`recreate1.md`](recreate1.md) - Explains the descriptive statistics analysis.
+    - [`recreate2.md`](recreate2.md) - Explains the H1 and H2 analysis.
+    - [`recreate3.md`](recreate3.md) - Explains the H3 mediation analysis.
+    - [`recreate4.md`](recreate4.md) - Explains the participant-level analyses.
     -
         - `assets/recreate/*` - Contains analysis reproduction screenshots.
 
