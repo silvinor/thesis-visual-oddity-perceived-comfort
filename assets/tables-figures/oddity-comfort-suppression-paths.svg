@@ -120,7 +120,7 @@
 
   <!-- Descriptives -->
   <g>
-    <text x="1100" y="80" class="f8">
+    <text x="1126" y="80" class="f8">
       <tspan> indirect </tspan>
       <tspan class=""> (<tspan class="italic">a&#x00D7;b</tspan>) = +1.162 </tspan>
     </text>
@@ -139,12 +139,12 @@
 
   <!-- Legend / Key -->
   <g style="opacity:0.75">
-    <disabled_rect x="1150" y="236" width="386" height="116" rx="4" class="thin" />
-    <line x1="1196" y1="266" x2="1266" y2="266" marker-end="url(#arrow)" class="thick s8 f8" />
-    <line x1="1196" y1="296" x2="1266" y2="296" marker-end="url(#arrow)" class="thick dashed s3 f3" />
-    <line x1="1196" y1="326" x2="1266" y2="326" marker-end="url(#arrow)" class="thick dotted s8 fn" />
-    <text x="1280" y="272" class="left f8 small">Positive association</text>
-    <text x="1280" y="302" class="left f3 small">Negative association</text>
-    <text x="1280" y="332" class="left f8 small">Total effect</text>
+    <disabled_rect x="1150" y="266" width="386" height="116" rx="4" class="thin" />
+    <line x1="1196" y1="296" x2="1266" y2="296" marker-end="url(#arrow)" class="thick s8 f8" />
+    <line x1="1196" y1="326" x2="1266" y2="326" marker-end="url(#arrow)" class="thick dashed s3 f3" />
+    <line x1="1196" y1="356" x2="1266" y2="356" marker-end="url(#arrow)" class="thick dotted s8 fn" />
+    <text x="1280" y="302" class="left f8 small">Positive association</text>
+    <text x="1280" y="332" class="left f3 small">Negative association</text>
+    <text x="1280" y="362" class="left f8 small">Total effect</text>
   </g>
 </svg>
