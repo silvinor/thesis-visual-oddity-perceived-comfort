@@ -1,36 +1,40 @@
 ---
 ---
-
-> **⚠️ UNSORTED ... TODO ...**
-
 # References
-
-- Bar, M. (2004). Visual objects in context. Nature Reviews Neuroscience, 5(8), 617–629. https://doi.org/10.1038/nrn1476 
-- Barrett, L. F., & Bar, M. (2009). See it with feeling: Affective predictions during object perception. Philosophical Transactions of the Royal Society B: Biological Sciences, 364(1521), 1325–1334. https://doi.org/10.1098/rstb.2008.0312 
-- Caplette, L., Gosselin, F., Mermillod, M., & Wicker, B. (2020). Real-world expectations and their affective value modulate object processing. NeuroImage, 213, 116736. https://doi.org/10.1016/j.neuroimage.2020.116736 
-- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. Behavioral and Brain Sciences, 36(3), 181–204. https://doi.org/10.1017/S0140525X12000477 
-- Friston, K. (2010). The free-energy principle: A unified brain theory? Nature Reviews Neuroscience, 11(2), 127–138. https://doi.org/10.1038/nrn2787 
-- Greene, M. R., Botros, A. P., Beck, D. M., & Fei-Fei, L. (2015). What you see is what you expect: Rapid scene understanding benefits from prior experience. Attention, Perception, & Psychophysics, 77(4), 1239–1251. https://doi.org/10.3758/s13414-015-0859-8 
-- McLean, D., Nuthmann, A., Renoult, L., & Malcolm, G. L. (2023). Expectation-based gist facilitation: Rapid scene understanding and the role of top-down information. Journal of Experimental Psychology: General, 152(7), 1907–1936. https://doi.org/10.1037/xge0001363 
-- Oliva, A., & Torralba, A. (2007). The role of context in object recognition. Trends in Cognitive Sciences, 11(12), 520–527. https://doi.org/10.1016/j.tics.2007.09.009 
-- Rao, R. P., & Ballard, D. H. (1999). Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects. Nature Neuroscience, 2(1), 79–87. https://doi.org/10.1038/4580 
-- Ruzzoli, M., McGuinness, A., Morís Fernández, L., & Soto-Faraco, S. (2020). From cognitive control to visual incongruity: Conflict detection in surrealistic images. PLOS ONE, 15(6), e0224053. https://doi.org/10.1371/journal.pone.0224053 
-- Sadeghi, S., Gu, Z., De Rosa, E., Kuceyeski, A., & Anderson, A. K. (2024). Direct perception of affective valence from vision. Nature Communications, 15(1), 10735. https://doi.org/10.1038/s41467-024-53668-6 
-- Sasson, N. J., Faso, D. J., Nugent, J., Lovell, S., Kennedy, D. P., & Grossman, R. B. (2017). Neurotypical peers are less willing to interact with those with autism based on thin slice judgments. Scientific Reports, 7, 40700. https://doi.org/10.1038/srep40700 
-- Schreuder, E., Van Erp, J., Toet, A., & Kallen, V. L. (2016). Emotional responses to multisensory environmental stimuli: A conceptual framework and literature review. Sage Open, 6(1). https://doi.org/10.1177/2158244016630591 
-
----
-
-- Berman, M. G., Hout, M. C., Kardan, O., Hunter, M. R., Yourganov, G., Henderson, J. M., Hanayik, T., Karimi, H., & Jonides, J. (2014). The Perception of Naturalness Correlates with Low-Level Visual Features of Environmental Scenes. PLOS ONE, 9(12), e114572. https://doi.org/10.1371/journal.pone.0114572 
-- Damiano, C., Walther, D. B., & Cunningham, W. A. (2021). Contour features predict valence and threat judgements in scenes. Scientific Reports, 11(1), 19405. https://doi.org/10.1038/s41598-021-99044-y 
-- Faul, F., Erdfelder, E., Lang, A. G., & Buchner, A. (2007). G*Power 3: a flexible statistical power analysis program for the social, behavioral, and biomedical sciences. Behavior Research Methods, 39(2), 175–191. https://doi.org/10.3758/bf03193146 
-- Hayes, A. F. (2017). Introduction to mediation, moderation, and conditional process analysis: A regression-based approach. Guilford publications. 
-- Mavros, P., M, J. W., Nazemi, M., Ong, C. H., & Holscher, C. (2022). A mobile EEG study on the psychophysiological effects of walking and crowding in indoor and outdoor urban environments. Scientific Reports, 12(1), 18476. https://doi.org/10.1038/s41598-022-20649-y 
-- Mehrabian, A., & Russell, J. A. (1974). An approach to environmental psychology. the MIT Press. 
-- OpenAI. (2026). ChatGPT (GPT-5) [Large language model]. https://chat.openai.com
-- Schreuder, E., Van Erp, J., Toet, A., & Kallen, V. L. (2016). Emotional responses to multisensory environmental stimuli: A conceptual framework and literature review. Sage Open, 6(1). https://doi.org/10.1177/2158244016630591 
-
----
-
-- Box, G. E. P. (1954). Some theorems on quadratic forms applied in the study of analysis of variance problems, I. Effect of inequality of variance in the one-way classification. The Annals of Mathematical Statistics, 25(2), 290–302. https://doi.org/10.1214/aoms/1177728786
-- Hayes, A. F., & Cai, L. (2007). Using heteroskedasticity-consistent standard error estimators in OLS regression: An introduction and software implementation. Behavior Research Methods, 39(4), 709–722. https://doi.org/10.3758/BF03192961
+- Allen, M. S., Iliescu, D., & Greiff, S. (2022). Single Item Measures in Psychological Science. *European Journal of Psychological Assessment*, *38*(1), 1–5. <https://doi.org/10.1027/1015-5759/a000699>
+- Anthropic. (2026). *Claude Opus 5*. \[Large language model\]. <https://claude.ai/>
+- Bar, M. (2004). Visual objects in context. *Nature Reviews Neuroscience*, *5*(8), 617–629. <https://doi.org/10.1038/nrn1476>
+- Barrett, L. F., & Bar, M. (2009). See it with feeling: Affective predictions during object perception. *Philosophical Transactions of the Royal Society B: Biological Sciences*, *364*(1521), 1325–1334. <https://doi.org/10.1098/rstb.2008.0312>
+- Berman, M. G., Hout, M. C., Kardan, O., Hunter, M. R., Yourganov, G., Henderson, J. M., Hanayik, T., Karimi, H., & Jonides, J. (2014). The Perception of Naturalness Correlates with Low-Level Visual Features of Environmental Scenes. *PLOS ONE*, *9*(12), e114572. <https://doi.org/10.1371/journal.pone.0114572>
+- Box, G. E. P. (1954). Some Theorems on Quadratic Forms Applied in the Study of Analysis of Variance Problems, I. Effect of Inequality of Variance in the One-Way Classification. *Annals of Mathematical Statistics, The*, *25*(2), 290–302. <https://doi.org/10.1214/aoms/1177728786>
+- Caplette, L., Gosselin, F., Mermillod, M., & Wicker, B. (2020). Real-world expectations and their affective value modulate object processing. *NeuroImage*, *213*, 116736. <https://doi.org/10.1016/j.neuroimage.2020.116736>
+- Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, *36*(3), 181–204. <https://doi.org/10.1017/S0140525X12000477>
+- Damiano, C., Walther, D. B., & Cunningham, W. A. (2021). Contour features predict valence and threat judgements in scenes. *Scientific Reports*, *11*(1), 19405. <https://doi.org/10.1038/s41598-021-99044-y>
+- Faul, F., Erdfelder, E., Lang, A. G., & Buchner, A. (2007). G\*Power 3: a flexible statistical power analysis program for the social, behavioral, and biomedical sciences. *Behavior Research Methods*, *39*(2), 175–191. <https://doi.org/10.3758/bf03193146>
+- Friston, K. (2010). The free-energy principle: A unified brain theory? *Nature Reviews Neuroscience*, *11*(2), 127–138. <https://doi.org/10.1038/nrn2787>
+- Greene, M. R., Botros, A. P., Beck, D. M., & Fei-Fei, L. (2015). What you see is what you expect: Rapid scene understanding benefits from prior experience. *Attention, Perception, & Psychophysics*, *77*(4), 1239–1251. <https://doi.org/10.3758/s13414-015-0859-8>
+- Hayes, A. F. (2017). *Introduction to mediation, moderation, and conditional process analysis: A regression-based approach*. Guilford publications.
+- Hayes, A. F., & Cai, L. (2007). Using heteroskedasticity-consistent standard error estimators in OLS regression: an introduction and software implementation. *Behavior Research Methods*, *39*(4), 709–722. <https://doi.org/10.3758/bf03192961>
+- International Business Machines Corporation. (2025). *IBM SPSS Statistics (Version 31.0.1.0)*. In IBM Corp. <https://ibm.com/products/spss-statistics>
+- Jones, D. R., DeBrabander, K. M., & Sasson, N. J. (2021). Effects of autism acceptance training on explicit and implicit biases toward autism. *Autism*, *25*(5), 1246–1261. <https://doi.org/10.1177/1362361320984896>
+- Judd, C. M., Westfall, J., & Kenny, D. A. (2012). Treating stimuli as a random factor in social psychology: a new and comprehensive solution to a pervasive but largely ignored problem. *Journal of Personality and Social Psychology*, *103*(1), 54–69. <https://doi.org/10.1037/a0028347>
+- MacKinnon, D. P., Krull, J. L., & Lockwood, C. M. (2000). Equivalence of the mediation, confounding and suppression effect. *Prevention Science*, *1*(4), 173–181. <https://doi.org/10.1023/a:1026595011371>
+- Mavros, P., M, J. W., Nazemi, M., Ong, C. H., & Holscher, C. (2022). A mobile EEG study on the psychophysiological effects of walking and crowding in indoor and outdoor urban environments. *Scientific Reports*, *12*(1), 18476. <https://doi.org/10.1038/s41598-022-20649-y>
+- McLean, D., Nuthmann, A., Renoult, L., & Malcolm, G. L. (2023). Expectation-based gist facilitation: Rapid scene understanding and the role of top-down information. *Journal of Experimental Psychology: General*, *152*(7), 1907–1936. <https://doi.org/10.1037/xge0001363>
+- Mehrabian, A., & Russell, J. A. (1974). *An approach to environmental psychology.* the MIT Press.
+- Morrison, K. E., DeBrabander, K. M., Faso, D. J., & Sasson, N. J. (2019). Variability in first impressions of autistic adults made by neurotypical raters is driven more by characteristics of the rater than by characteristics of autistic adults. *Autism*, *23*(7), 1817–1829. <https://doi.org/10.1177/1362361318824104>
+- Oliva, A., & Torralba, A. (2007). The role of context in object recognition. *Trends in Cognitive Sciences*, *11*(12), 520–527. <https://doi.org/10.1016/j.tics.2007.09.009>`
+- OpenAI. (2026a). *ChatGPT (GPT-5)*. \[Generative AI image-generation tool\]. <https://chatgpt.com>
+- OpenAI. (2026b). *Codex (GPT-5.6 Sol)*. \[AI coding assistant\]. <https://chatgpt.com/codex>
+- Orne, M. T. (1962). On the social psychology of the psychological experiment: With particular reference to demand characteristics and their implications. *American Psychologist*, *17*(11), 776–783. <https://doi.org/10.1037/h0043424>
+- Rao, R. P., & Ballard, D. H. (1999). Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects. *Nature Neuroscience*, *2*(1), 79–87. <https://doi.org/10.1038/4580>
+- Reber, R., Schwarz, N., & Winkielman, P. (2004). Processing fluency and aesthetic pleasure: is beauty in the perceiver's processing experience? *Personality and Social Psychology Review*, *8*(4), 364–382. <https://doi.org/10.1207/s15327957pspr0804_3>
+- Ruzzoli, M., McGuinness, A., Morís Fernández, L., & Soto-Faraco, S. (2020). From cognitive control to visual incongruity: Conflict detection in surrealistic images. *PLOS ONE*, *15*(6), e0224053. <https://doi.org/10.1371/journal.pone.0224053>
+- Sadeghi, S., Gu, Z., De Rosa, E., Kuceyeski, A., & Anderson, A. K. (2024). Direct perception of affective valence from vision. *Nature Communications*, *15*(1), 10735. <https://doi.org/10.1038/s41467-024-53668-6>
+- Sasson, N. J., Faso, D. J., Nugent, J., Lovell, S., Kennedy, D. P., & Grossman, R. B. (2017). Neurotypical peers are less willing to interact with those with autism based on thin slice judgments. *Scientific Reports*, *7*, 40700. <https://doi.org/10.1038/srep40700>
+- Sasson, N. J., & Morrison, K. E. (2019). First impressions of adults with autism improve with diagnostic disclosure and increased autism knowledge of peers. *Autism*, *23*(1), 50–59. <https://doi.org/10.1177/1362361317729526>
+- Schreuder, E., Van Erp, J., Toet, A., & Kallen, V. L. (2016). Emotional responses to multisensory environmental stimuli: A conceptual framework and literature review. *Sage Open*, *6*(1). <https://doi.org/10.1177/2158244016630591>
+- Silvia, P. J. (2005). What is interesting? Exploring the appraisal structure of interest. *Emotion*, *5*(1), 89–102. <https://doi.org/10.1037/1528-3542.5.1.89>
+- Spencer, S. J., Zanna, M. P., & Fong, G. T. (2005). Establishing a causal chain: why experiments are often more effective than mediational analyses in examining psychological processes. *Journal of Personality and Social Psychology*, *89*(6), 845–851. <https://doi.org/10.1037/0022-3514.89.6.845>
+- Van de Cruys, S., & Wagemans, J. (2011). Putting reward in art: A tentative prediction error account of visual art. *i-Perception*, *2*(9), 1035–1062. <https://doi.org/10.1068/i0466aap>
+- Wicherts, J. M., Veldkamp, C. L., Augusteijn, H. E., Bakker, M., van Aert, R. C., & van Assen, M. A. (2016). Degrees of Freedom in Planning, Running, Analyzing, and Reporting Psychological Studies: A Checklist to Avoid p-Hacking. *Frontiers in Psychology*, *7*, 1832. <https://doi.org/10.3389/fpsyg.2016.01832>
