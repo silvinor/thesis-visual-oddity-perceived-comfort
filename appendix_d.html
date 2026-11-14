@@ -15,27 +15,26 @@ style: >-
   .spss tbody td { text-align: right; white-space: nowrap; }
   .spss-note { font-size: 0.8rem; margin: 0; }
   .spss-output { font-size: 0.8rem; line-height: 1.35; padding: 1rem; border: 1px solid rgba(127,127,127,0.35); border-radius: 0.5em; overflow-x: auto; }
-  .appendix-c section { margin-top: 3rem; }
+  #appendix-d section { margin-top: 3rem; }
+  code { font-size: .75em !important; }
 ---
 
-<div class="appendix-c">
+<div id="appendix-d">
 
-<h1>Appendix D</h1>
-
-<p class="lead">SPSS Syntax and Output for the Reported Analyses</p>
+<h1>Appendix D <br><small>SPSS Syntax and Output for the Reported Analyses</small></h1>
 
 <p>All analyses were run in IBM SPSS Statistics (Version 31.0.1.0), with the PROCESS macro (Version 4.2; Hayes, 2017) for the mediation models. Each section gives the syntax that was run and the output it produced. PROCESS output is reproduced verbatim; the regression tables are transcribed from the SPSS output file, with values shown at the precision SPSS displayed them.</p>
 
 <p>Variables: <code>c_discom</code> = discomfort (1&ndash;4, higher = more discomfort); <code>c_expect</code> = perceived unexpectedness (1&ndash;5, higher = more unexpected); <code>c_oddity</code> = oddity (0 = absent, 1 = present); <code>c_noise</code> = activity level (0 = low, 1 = high); <code>c_oddnse</code> = <code>c_oddity</code> &times; <code>c_noise</code>.</p>
 
 <ul>
-  <li><a href="#c1">C1. Multiple regression of discomfort on oddity, activity level and their interaction (H1 and H2)</a></li>
-  <li><a href="#c2">C2. Mediation of oddity on discomfort by perceived unexpectedness, rating level (H3)</a></li>
-  <li><a href="#c3">C3. Mediation re-estimated on participant &times; condition means (sensitivity analysis)</a></li>
+  <li><a href="#d1">D1. Multiple regression of discomfort on oddity, activity level and their interaction (H1 and H2)</a></li>
+  <li><a href="#d2">D2. Mediation of oddity on discomfort by perceived unexpectedness, rating level (H3)</a></li>
+  <li><a href="#d3">D3. Mediation re-estimated on participant &times; condition means (sensitivity analysis)</a></li>
 </ul>
 
-<section id="c1">
-<h2>C1. Multiple Regression (H1 and H2)</h2>
+<section id="d1">
+<h2>D1. Multiple Regression (H1 and H2)</h2>
 
 <p><i>N</i> = 2,688 ratings. Ordinary least squares standard errors.</p>
 
@@ -123,27 +122,27 @@ style: >-
 <p class="mt-4">No Casewise Diagnostics table was produced: no case had a standardised residual beyond &plusmn;3. The residual histogram, normal P&ndash;P plot and residual-by-predicted scatterplot requested above are not reproduced here.</p>
 </section>
 
-<section id="c2">
-<h2>C2. Mediation Analysis (H3)</h2>
+<section id="d2">
+<h2>D2. Mediation Analysis (H3)</h2>
 
 <p><i>N</i> = 2,688 ratings. PROCESS Model 4 with activity level as a covariate, HC4 standard errors, 10,000 bootstrap samples and a fixed random seed (20260727), so the bootstrap interval for the indirect effect can be reproduced exactly.</p>
 
 <h3 class="h5">Syntax</h3>
 <pre class="language-none line-numbers" style="white-space: pre-wrap;"><code
   >* Encoding: UTF-8.
-    PROCESS
-        y=c_discom
-        /x=c_oddity
-        /m=c_expect
-        /cov=c_noise
-        /model=4
-        /boot=10000
-        /conf=95
-        /hc=4
-        /effsize=1
-        /stand=1
-        /total=1
-        /seed=20260727.</code></pre>
+PROCESS
+    y=c_discom
+    /x=c_oddity
+    /m=c_expect
+    /cov=c_noise
+    /model=4
+    /boot=10000
+    /conf=95
+    /hc=4
+    /effsize=1
+    /stand=1
+    /total=1
+    /seed=20260727.</code></pre>
 
 <h3 class="h5">Output</h3>
 <pre class="spss-output"><code>Run MATRIX procedure:
@@ -262,8 +261,8 @@ NOTE: A heteroscedasticity consistent standard error and covariance matrix estim
 ------ END MATRIX -----</code></pre>
 </section>
 
-<section id="c3">
-<h2>C3. Sensitivity to the Unit of Analysis</h2>
+<section id="d3">
+<h2>D3. Sensitivity to the Unit of Analysis</h2>
 
 <p><i>N</i> = 336 participant &times; condition means, each the mean of the eight ratings one participant gave in one condition. The model is otherwise identical to C2, including the fixed random seed (20260727), so the bootstrap interval for the indirect effect can be reproduced exactly.</p>
 

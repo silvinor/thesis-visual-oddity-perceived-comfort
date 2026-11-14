@@ -79,4 +79,4 @@ The same logic may extend, more tentatively, to how people respond to each other
 
 What looks out of place feels uncomfortable mostly because it is unexpected. In this study, adding a harmless out-of-place element to an everyday scene made it less comfortable to imagine entering, and that effect ran almost entirely through how unexpected the scene looked. Busyness added discomfort in a separate way. And once surprise was taken into account, the oddity itself may even have pulled slightly the other way. By testing an affective account of prediction with visual scenes alone, the study suggests that the discomfort sits in the gap between what the observer expected and what they saw. Expectations are learned, so this discomfort can change. That moves at least some of the responsibility for it from the element to the observer. If the same holds for how people see each other, then the way to ease discomfort with people who seem different is not to change them, but to educate those doing the looking.
 
-<div align="center">✦</div>
+<p align="center">✦</p>

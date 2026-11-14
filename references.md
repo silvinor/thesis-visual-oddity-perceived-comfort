@@ -1,5 +1,6 @@
 ---
 ---
+
 # References
 - <a href="references/10.1027_1015-5759_a000699.pdf"><i class="far fa-fw fa-file-pdf"></i></a>
    Allen, M. S., Iliescu, D., & Greiff, S. (2022). Single Item Measures in Psychological Science. *European Journal of Psychological Assessment*, *38*(1), 1–5. <https://doi.org/10.1027/1015-5759/a000699>

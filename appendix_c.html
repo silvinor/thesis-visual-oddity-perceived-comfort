@@ -1,3 +1,480 @@
 ---
+layout: default
+js:
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-python.min.js
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js
+css:
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-coy.min.css
+  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css
+style: >-
+  #appendix-c section { margin-top: 3rem; }
+  code { font-size: .75em !important; }
 ---
 
+<div id="appendix-c">
+
+<h1>Appendix C <br><small>Python Scripts for Converting Data</small></h1>
+
+<p>The original Gorilla task export (<a href="data/data_ODDITY_exp_274266-v20_task-8m3r.original.csv"><code>&hellip;.original.csv</code></a>) records each system event on a separate row. The scripts below produce analysis-ready data, including a cleaned trial-level file (<a href="data/data_ODDITY_exp_274266-v20_task-8m3r.clean.csv"><code>&hellip;.clean.csv</code></a>) with one row per participant per trial.</p>
+
+<p><code>demographics.py</code> must run first because <code>clean.py</code> and <code>timer.py</code> read its output.</p>
+
+<ul>
+  <li><a href="#c1">C1. <code>demographics.py</code> extracts each participant&rsquo;s age, gender, and time zone.</a></li>
+  <li><a href="#c2">C2. <code>clean.py</code> combines trial events and adds the participant data.</a></li>
+  <li><a href="#c3">C3. <code>timer.py</code> calculates each participant&rsquo;s task completion time.</a></li>
+</ul>
+
+<section id="c1">
+<h2>C1. <a href="source/demographics.py"><code>demographics.py</code></a></h2>
+
+<p>This script runs first. It creates <code>demographics.csv</code>, which contains one row for each participant.</p>
+
+<pre class="language-python line-numbers" style="white-space: pre-wrap;"><code>import csv
+import sys
+from pathlib import Path
+
+SCREEN_COLUMNS = [
+    ("age", "age"),
+    ("gender", "gender"),
+]
+
+OUTPUT_COLUMNS = ["participant_index", "participant_id", "timezone"] + [out for _, out in SCREEN_COLUMNS]
+
+def session_key(row: dict) -&gt; tuple:
+    return (
+        row.get("Participant Private ID"),
+        row.get("Participant External Session ID"),
+    )
+
+def clean_file(input_path: Path, output_path: Path) -&gt; Path:
+    with input_path.open(newline="", encoding="utf-8-sig") as fin, \
+            output_path.open("w", newline="", encoding="utf-8") as fout:
+        writer = csv.DictWriter(fout, fieldnames=OUTPUT_COLUMNS, restval="")
+        writer.writeheader()
+
+        total = 0
+        current_key = None
+        participant_index = 0
+        record: dict = {}
+
+        def flush():
+            nonlocal total
+
+            if record and any(record.get(out) for _, out in SCREEN_COLUMNS):
+                writer.writerow(record)
+                total += 1
+
+        for row in csv.DictReader(fin):
+            key = session_key(row)
+            if key != current_key:
+                flush()
+                current_key = key
+                participant_index += 1
+                record = {
+                    "participant_index": participant_index,
+                    "participant_id": key[1],
+                    "timezone": row.get("Local Timezone", ""),
+                }
+
+            if (row.get("Response Type") or "").strip() != "response":
+                continue
+            screen = (row.get("Screen") or "").strip()
+            for src, out in SCREEN_COLUMNS:
+                if screen == src:
+                    record[out] = row.get("Response", "")
+        flush()
+
+    print(f"{input_path.name}: {total} participants -&gt; {output_path.name}")
+    return output_path
+
+def main(argv: list[str]) -&gt; int:
+    if len(argv) != 3:
+        print(__doc__.strip(), file=sys.stderr)
+        return 1
+    input_path = Path(argv[1])
+    if not input_path.is_file():
+        print(f"error: file not found: {input_path}", file=sys.stderr)
+        return 1
+    clean_file(input_path, Path(argv[2]))
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))</code></pre>
+</section>
+
+<section id="c2">
+<h2>C2. <a href="source/clean.py"><code>clean.py</code></a></h2>
+
+<p>This script reads the original task export and <code>demographics.csv</code>. It creates the cleaned experimental data file.</p>
+
+<pre class="language-python line-numbers" style="white-space: pre-wrap;"><code>import csv
+import sys
+from pathlib import Path
+
+SPREADSHEET_COLUMNS = [
+    ("Spreadsheet: image_set", "image_set"),
+    ("Spreadsheet: noisiness", "noisiness"),
+    ("Spreadsheet: oddity", "oddity"),
+    ("Spreadsheet: quadrant", "quadrant"),
+]
+
+RESPONSE_TAGS = ["expectedness", "comfortable"]
+
+EXCLUDED_PARTICIPANTS = [
+    "6a55f1d8045ad75a5b407efe",
+]
+
+STRING_COLUMNS = {
+    "gender",
+    "expectedness",
+    "comfortable",
+    "propensity",
+    "noisiness",
+    "oddity",
+    "c_tmzone",
+}
+
+CODIFIED_COLUMNS = [
+    ("expectedness", "c_expect", lambda n: n),
+    ("comfortable", "c_discom", lambda n: n),
+    ("noisiness", "c_noise", lambda n: n),
+    ("oddity", "c_oddity", lambda n: n),
+    ("propensity", "c_propen", lambda n: n),
+]
+
+OUTPUT_COLUMNS = (
+    ["index", "participant_index", "age", "gender", "timezone", "trial_number"]
+    + RESPONSE_TAGS
+    + ["propensity"]
+    + [out for _, out in SPREADSHEET_COLUMNS]
+)
+OUTPUT_COLUMNS.insert(OUTPUT_COLUMNS.index("image_set") + 1, "image_set_repeat")
+OUTPUT_COLUMNS += [out for _, out, _ in CODIFIED_COLUMNS] + ["c_oddnse", "c_tmzone"]
+
+def leading_digit(value: str):
+    value = (value or "").strip()
+    return int(value[0]) if value[:1].isdigit() else None
+
+def classify_timezone(value: str) -&gt; str:
+    value = (value or "").strip()
+    try:
+        n = float(value)
+    except ValueError:
+        return ""
+    if n &lt; -1:
+        return "US"
+    if n &lt;= 3:
+        return "UK"
+    return "AU"
+
+def codify(record: dict) -&gt; None:
+    for src, out, rule in CODIFIED_COLUMNS:
+        n = leading_digit(record.get(src, ""))
+        record[out] = rule(n) if n is not None else ""
+    record["c_oddnse"] = 1 if record["c_oddity"] == 1 and record["c_noise"] == 1 else 0
+    record["c_tmzone"] = classify_timezone(record.get("timezone", ""))
+
+def numify(record: dict) -&gt; None:
+
+    for col in OUTPUT_COLUMNS:
+        if col in STRING_COLUMNS:
+            continue
+        value = record.get(col)
+        if isinstance(value, str):
+            try:
+                record[col] = int(value)
+            except ValueError:
+                pass
+
+def session_key(row: dict) -&gt; tuple:
+    return (
+        row.get("Participant Private ID"),
+        row.get("Participant External Session ID"),
+    )
+
+def is_excluded(key: tuple) -&gt; bool:
+    return key is not None and key[1] in EXCLUDED_PARTICIPANTS
+
+def read_rows(input_path: Path):
+    with input_path.open(newline="", encoding="utf-8-sig") as f:
+        yield from csv.DictReader(f)
+
+def collect_propensities(input_path: Path) -&gt; dict:
+
+    propensities = {}
+    for row in read_rows(input_path):
+        if (
+            (row.get("Display") or "").strip() == "propensity"
+            and (row.get("Response Type") or "").strip() == "response"
+        ):
+            propensities[session_key(row)] = row.get("Response", "")
+    return propensities
+
+def load_demographics(demographics_path: Path) -&gt; dict:
+
+    demographics = {}
+    with demographics_path.open(newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            demographics[row["participant_index"]] = {
+                "age": row.get("age", ""),
+                "gender": row.get("gender", ""),
+                "timezone": row.get("timezone", ""),
+            }
+    return demographics
+
+def clean_file(input_path: Path, demographics_path: Path, output_path: Path) -&gt; Path:
+    demographics = load_demographics(demographics_path)
+    propensities = collect_propensities(input_path)
+
+    with output_path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f, fieldnames=OUTPUT_COLUMNS, restval="", quoting=csv.QUOTE_NONNUMERIC
+        )
+
+        csv.writer(f).writerow(OUTPUT_COLUMNS)
+
+        total = 0
+        current_key = None
+        participant_index = 0
+        trials: dict[str, dict] = {}
+        set_counts: dict[str, int] = {}
+
+        def flush():
+            nonlocal total
+            excluded = is_excluded(current_key)
+            propensity = propensities.get(current_key, "")
+            for record in trials.values():
+                total += 1
+                if excluded:
+                    continue
+                record["index"] = total
+                record["propensity"] = propensity
+                record.update(demographics.get(str(record["participant_index"]), {}))
+                codify(record)
+                numify(record)
+                writer.writerow(record)
+            trials.clear()
+
+        for row in read_rows(input_path):
+            tag = (row.get("Tag") or "").strip()
+            if tag not in RESPONSE_TAGS:
+                continue
+
+            key = session_key(row)
+            if key != current_key:
+                flush()
+                current_key = key
+                participant_index += 1
+                set_counts.clear()
+
+            trial = row.get("Trial Number", "")
+            record = trials.get(trial)
+            if record is None:
+                record = {"participant_index": participant_index, "trial_number": trial}
+                for src, out in SPREADSHEET_COLUMNS:
+                    record[out] = row.get(src, "")
+                set_counts[record["image_set"]] = set_counts.get(record["image_set"], 0) + 1
+                record["image_set_repeat"] = set_counts[record["image_set"]]
+                trials[trial] = record
+            record[tag] = row.get("Response", "")
+        flush()
+
+    print(f"{input_path.name}: {total} trials -&gt; {output_path.name}")
+    return output_path
+
+def main(argv: list[str]) -&gt; int:
+    if len(argv) != 4:
+        print(__doc__.strip(), file=sys.stderr)
+        return 1
+    input_path, demographics_path = Path(argv[1]), Path(argv[2])
+    for path in (input_path, demographics_path):
+        if not path.is_file():
+            print(f"error: file not found: {path}", file=sys.stderr)
+            return 1
+    clean_file(input_path, demographics_path, Path(argv[3]))
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))</code></pre>
+</section>
+
+<section id="c3">
+<h2>C3. <a href="source/timer.py"><code>timer.py</code></a></h2>
+
+<p>This script reads the original task export and <code>demographics.csv</code>. It creates one timing record for each participant.</p>
+
+<pre class="language-python line-numbers" style="white-space: pre-wrap;"><code>import csv
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
+
+TIMESTAMP_COLUMN = "Local Timestamp"
+
+EXCLUDED_PARTICIPANTS = [
+    "6a55f1d8045ad75a5b407efe",
+]
+
+STRING_COLUMNS = {
+    "gender",
+    "h_start",
+    "h_end",
+    "h_duration",
+}
+
+OUTPUT_COLUMNS = [
+    "index",
+    "participant_index",
+    "age",
+    "gender",
+    "timezone",
+    "t_start",
+    "t_end",
+    "t_duration",
+    "h_start",
+    "h_end",
+    "h_duration",
+]
+
+def human_time(epoch_ms: int) -&gt; str:
+
+    return datetime.fromtimestamp(epoch_ms / 1000, timezone.utc).strftime(
+        "%Y-%m-%d %H:%M:%S"
+    )
+
+def human_duration(seconds: float) -&gt; str:
+
+    total = int(round(seconds))
+    hours, remainder = divmod(total, 3600)
+    minutes, secs = divmod(remainder, 60)
+    if hours:
+        return f"{hours}h {minutes}m {secs}s"
+    if minutes:
+        return f"{minutes}m {secs}s"
+    return f"{secs}s"
+
+def numify(record: dict) -&gt; None:
+
+    for col in OUTPUT_COLUMNS:
+        if col in STRING_COLUMNS:
+            continue
+        value = record.get(col)
+        if isinstance(value, str):
+            try:
+                record[col] = int(value)
+            except ValueError:
+                try:
+                    record[col] = float(value)
+                except ValueError:
+                    pass
+
+def session_key(row: dict) -&gt; tuple:
+    return (
+        row.get("Participant Private ID"),
+        row.get("Participant External Session ID"),
+    )
+
+def is_excluded(key: tuple) -&gt; bool:
+    return key is not None and key[1] in EXCLUDED_PARTICIPANTS
+
+def read_rows(input_path: Path):
+    with input_path.open(newline="", encoding="utf-8-sig") as f:
+        yield from csv.DictReader(f)
+
+def timestamp_of(row: dict):
+
+    value = (row.get(TIMESTAMP_COLUMN) or "").strip()
+    try:
+        return int(value)
+    except ValueError:
+        return None
+
+def load_demographics(demographics_path: Path) -&gt; dict:
+
+    demographics = {}
+    with demographics_path.open(newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            demographics[row["participant_index"]] = {
+                "age": row.get("age", ""),
+                "gender": row.get("gender", ""),
+                "timezone": row.get("timezone", ""),
+            }
+    return demographics
+
+def time_file(input_path: Path, demographics_path: Path, output_path: Path) -&gt; Path:
+    demographics = load_demographics(demographics_path)
+
+    with output_path.open("w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f, fieldnames=OUTPUT_COLUMNS, restval="", quoting=csv.QUOTE_NONNUMERIC
+        )
+
+        csv.writer(f).writerow(OUTPUT_COLUMNS)
+
+        total = 0
+        written = 0
+        current_key = None
+        participant_index = 0
+        t_start = t_end = None
+
+        def flush():
+            nonlocal total, written
+            if t_start is None:
+                return
+            total += 1
+            if is_excluded(current_key):
+                return
+            duration = (t_end - t_start) / 1000
+            record = {
+                "index": total,
+                "participant_index": participant_index,
+                "t_start": t_start,
+                "t_end": t_end,
+                "t_duration": duration,
+                "h_start": human_time(t_start),
+                "h_end": human_time(t_end),
+                "h_duration": human_duration(duration),
+            }
+            record.update(demographics.get(str(participant_index), {}))
+            numify(record)
+            writer.writerow(record)
+            written += 1
+
+        for row in read_rows(input_path):
+            stamp = timestamp_of(row)
+            if stamp is None:
+                continue
+
+            key = session_key(row)
+            if key != current_key:
+                flush()
+                current_key = key
+                participant_index += 1
+                t_start = t_end = stamp
+
+            t_start = min(t_start, stamp)
+            t_end = max(t_end, stamp)
+        flush()
+
+    print(f"{input_path.name}: {written} participants -&gt; {output_path.name}")
+    return output_path
+
+def main(argv: list[str]) -&gt; int:
+    if len(argv) != 4:
+        print(__doc__.strip(), file=sys.stderr)
+        return 1
+    input_path, demographics_path = Path(argv[1]), Path(argv[2])
+    for path in (input_path, demographics_path):
+        if not path.is_file():
+            print(f"error: file not found: {path}", file=sys.stderr)
+            return 1
+    time_file(input_path, demographics_path, Path(argv[3]))
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv))</code></pre>
+</section>
+
+
+</div>

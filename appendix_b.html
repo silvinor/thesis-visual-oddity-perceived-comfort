@@ -4,12 +4,16 @@ js:
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism-autoloader.min.js
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js
-css: 
+css:
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-coy.min.css
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css
+style: >-
+  code { font-size: .75em !important; }
 ---
 
-<h1>Appendix B</h1>
+<div id="appendix-b">
+
+<h1>Appendix B <br><small>Gorilla custom randomiser script</small></h1>
 
 <pre class="language-javascript line-numbers" style="white-space: pre-wrap;"><code
   >//------------------------------------------------------------------------------
@@ -33,7 +37,7 @@ export interface My_Image_RandomiserFactory extends BaseRandomiseSpreadsheetFact
 @component("base.component.My_Image_Randomiser")
 export class My_Image_Randomiser extends BaseRandomiseSpreadsheet&lt;My_Image_RandomiserFactory&gt; {
 
-  /** 
+  /**
    *  The Fisher-Yates algorithm guarantees a statistically uniform shuffle
    *  Every permutation is equally likely - which is why it's preferred over naive random sorting approaches.
    *  Math.random() is automatically seeded from an OS-level entropy source -&gt; No way to replay a shuffle.
@@ -115,3 +119,5 @@ registerSimple("taskSpreadsheetRandomisationComponent", "My_Image_Randomiser", {
 
 //------------------------------------------------------------------------------
 // oef</code></pre>
+
+</div>
