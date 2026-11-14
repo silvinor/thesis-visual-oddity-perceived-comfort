@@ -6,7 +6,7 @@ js:
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-python.min.js
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js
 css:
-  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-coy.min.css
+  - prism-bs5.css
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css
 style: >-
   .doc_refs ul {

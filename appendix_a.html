@@ -3,14 +3,17 @@ layout: default
 style: >-
   .table thead th small { font-weight: normal; }
   .table tbody th { font-weight: normal; }
-  .table td, .table th { width: 20%; }
-  .table tbody td small { font-size: 8px; line-height: 1.5; display: inline-block; }
+  .table tbody td small { font-size: 50%; line-height: 1.5; display: inline-block; }
   .table tbody td img {
     border-radius: 0.5em;
     min-width: 90px;
   }
   .table td.column-0 {
-    background-color: rgba(127,127,127,0.25);
+    x_background-color: rgba(127,127,127,0.125);
+  }
+  .table td.column-0 small { font-size: 60%; }
+  #appendix-a {
+    font-family: "Times New Roman", var(--bs-font-serif, serif);
   }
 ---
 
@@ -19,13 +22,20 @@ style: >-
 <h1>Appendix A <br><small>Images used in trials</small></h1>
 
 <table class="mt-5 table">
+  <colgroup>
+    <col width="24%">
+    <col width="19%">
+    <col width="19%">
+    <col width="19%">
+    <col width="19%">
+  </colgroup>
   <thead>
     <tr>
-      <th>Original Image<br><small>Source Citation<br>(will not be used in test)</small></th>
-      <th>Low Noise, No Oddity<br><small>Ai Prompt</small></th>
-      <th>High Noise, No Oddity<br><small>Ai Prompt</small></th>
-      <th>Low Noise, Oddity Added<br><small>Ai Prompt</small></th>
-      <th>High Noise, Oddities Added<br><small>Ai Prompt</small></th>
+      <th>Original Image<br><small>Source Citation<br>(not used in trials)</small></th>
+      <th>Low Noise, No Oddity<br><small>AI Prompt</small></th>
+      <th>High Noise, No Oddity<br><small>AI Prompt</small></th>
+      <th>Low Noise, Oddity Added<br><small>AI Prompt</small></th>
+      <th>High Noise, Oddities Added<br><small>AI Prompt</small></th>
     </tr>
   </thead>
   <tbody>
@@ -69,7 +79,7 @@ style: >-
   </tbody>
 </table>
 
-<p><small><i>Note.</i> All original photographs and illustrations cited in first column. Altered images all modified using <b>ChatGPT Image 2.0</b> (OpenAI, 2026). <i>Accessed from 22 to 24 May 2026</i></small></p>
+<p><small><i>Note.</i> All original photographs and illustrations cited in first column. Altered images all modified using ChatGPT Image 2.0 (OpenAI, 2026). <i>Accessed from 22 to 24 May 2026</i></small></p>
 
 <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">

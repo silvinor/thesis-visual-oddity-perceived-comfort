@@ -4,7 +4,7 @@ js:
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.js
 css:
-  - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-coy.min.css
+  - prism-bs5.css
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/plugins/line-numbers/prism-line-numbers.min.css
 style: >-
   .spss-title { font-weight: bold; margin: 1.75rem 0 0.5rem; }
@@ -34,7 +34,7 @@ style: >-
 </ul>
 
 <section id="d1">
-<h2>D1. Multiple Regression (H1 and H2)</h2>
+<h4>D1. Multiple Regression (H1 and H2)</h4>
 
 <p><i>N</i> = 2,688 ratings. Ordinary least squares standard errors.</p>
 
@@ -123,14 +123,13 @@ style: >-
 </section>
 
 <section id="d2">
-<h2>D2. Mediation Analysis (H3)</h2>
+<h4>D2. Mediation Analysis (H3)</h4>
 
 <p><i>N</i> = 2,688 ratings. PROCESS Model 4 with activity level as a covariate, HC4 standard errors, 10,000 bootstrap samples and a fixed random seed (20260727), so the bootstrap interval for the indirect effect can be reproduced exactly.</p>
 
 <h3 class="h5">Syntax</h3>
 <pre class="language-none line-numbers" style="white-space: pre-wrap;"><code
-  >* Encoding: UTF-8.
-PROCESS
+>PROCESS
     y=c_discom
     /x=c_oddity
     /m=c_expect
@@ -262,14 +261,13 @@ NOTE: A heteroscedasticity consistent standard error and covariance matrix estim
 </section>
 
 <section id="d3">
-<h2>D3. Sensitivity to the Unit of Analysis</h2>
+<h4>D3. Sensitivity to the Unit of Analysis</h4>
 
 <p><i>N</i> = 336 participant &times; condition means, each the mean of the eight ratings one participant gave in one condition. The model is otherwise identical to C2, including the fixed random seed (20260727), so the bootstrap interval for the indirect effect can be reproduced exactly.</p>
 
 <h3 class="h5">Syntax</h3>
 <pre class="language-none line-numbers" style="white-space: pre-wrap;"><code
-  >* Encoding: UTF-8.
-PROCESS
+>PROCESS
     y=c_discom
     /x=c_oddity
     /m=c_expect
