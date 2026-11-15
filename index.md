@@ -35,6 +35,14 @@ style: >-
   .spss-output { font-size: 0.8rem; line-height: 1.35; padding: 1rem; border: 1px solid rgba(127,127,127,0.35); border-radius: 0.5em; overflow-x: auto; }
   p[align="center"] { color: #678; text-align: center; }
   body { font-variant-ligatures: no-contextual; }  
+script: >-
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('p > strong:first-child').forEach(label => {
+      if (/^(Figure|Table)\s/.test(label.textContent)) {
+        label.parentElement.classList.add('tsandfs');
+      }
+    });
+  });
 ---
 
 # Visual Oddity and Perceived Comfort in Everyday Scenes
