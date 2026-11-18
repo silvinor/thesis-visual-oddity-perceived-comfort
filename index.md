@@ -1,6 +1,13 @@
 ---
 layout: default
 title: 'Visual Oddity and Perceived Comfort in Everyday Scenes'
+description: >-
+  What looks out of place feels uncomfortable mostly because it is unexpected. In this study, adding a harmless out-of-place element to an everyday scene made it less comfortable to imagine entering, and that effect ran through how unexpected the scene looked.
+author: Silvino Rodrigues
+date: 2026-12-06
+seo:
+  type: ScholarlyArticle
+image: ./assets/img/unexpected-pelican.min.jpg
 js:
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/prism.min.js
   - https://cdn.jsdelivr.net/npm/prismjs@1.30.0/components/prism-python.min.js
