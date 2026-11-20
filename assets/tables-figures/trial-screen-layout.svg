@@ -2,12 +2,12 @@
   <style>
     line, rect {
       fill: none;
-      stroke: #777;
+      stroke: #7777;
       stroke-width: 1px;
     }
     text {
-      font-family: "Times New Roman", Times, serif;
-      font-size: 9.2pt;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
       fill: #111;
       text-anchor: middle;
     }
@@ -126,5 +126,5 @@ rR52vEiPppMZ00Mq5uighEIhEEEDpMSCCCCDExIIIIGhqPDS9xc/T01pDc6E4JuhECRiYohGJiYmJijF
   <text x="533" y="400">Certainly Not</text>
 
   <rect x="297" y="434" width="46" height="26" rx="4" class="btn" />
-  <text x="320" y="451" class="btx b">Next</text>
+  <text x="319.25" y="451" class="btx b">Next</text>
 </svg>

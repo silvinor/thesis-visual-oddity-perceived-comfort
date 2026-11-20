@@ -41,7 +41,7 @@ style: >-
   .spss-note { font-size: 0.8rem; margin: 0; }
   .spss-output { font-size: 0.8rem; line-height: 1.35; padding: 1rem; border: 1px solid rgba(127,127,127,0.35); border-radius: 0.5em; overflow-x: auto; }
   p[align="center"] { color: #678; text-align: center; }
-  body { font-variant-ligatures: no-contextual; }  
+  body { font-variant-ligatures: no-contextual; }
 script: >-
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('p > strong:first-child').forEach(label => {
@@ -88,5 +88,7 @@ whether the repo is checked out as `thesis/thesis1` or as the submodule
 </div>
 
 <p align="center" class="asterism">✦</p>
+
+<blockquote><p><small class="text-muted">Full source and experimental data for this thesis is available at: <a href="https://github.com/silvinor/thesis-visual-oddity-perceived-comfort" target="_blank">github.com/silvinor/thesis-visual-oddity-perceived-comfort</a>. Copyrights apply and are listed.</small></p></blockquote>
 
 <hr/>
